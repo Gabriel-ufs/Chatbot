@@ -93,7 +93,8 @@ namespace Microsoft.BotBuilderSamples.Dialogs
                 var doc = CRLVeFields.documentoCRLVePdf;
                 var nome = "CRLVe_" + CRLVeFields.codSegurancaIn + CRLVeFields.renavam + ".pdf";
 
-                if (CRLVeFields.documentoCRLVePdf.Length >= 268216)
+                //if (CRLVeFields.documentoCRLVePdf.Length >= 268216)
+                if (CRLVeFields.documentoCRLVePdf.Length >= 140000)
                 {
                     await stepContext.PromptAsync(nameof(ChoicePrompt), new PromptOptions
                     {
@@ -126,3 +127,4 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         }
     }
 }
+

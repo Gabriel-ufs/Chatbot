@@ -11,6 +11,9 @@ using Microsoft.Bot.Builder.Dialogs.Choices;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using CoreBot.Models;
+using System;
+using CoreBot.Services.WSDLService;
 
 namespace Microsoft.BotBuilderSamples.Dialogs
 {
@@ -35,6 +38,9 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             AddDialog(new RootLicenseDialog());
             AddDialog(new RootQnaMakerDialog());
             AddDialog(new RootOthersServicesDialog());
+            AddDialog(new RootConsultChoice());
+            AddDialog(new VehicleMenuDialog());
+            AddDialog(new HabilitacaoMenuDialog());
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 IntroStepAsync,
@@ -56,20 +62,29 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         /// <returns></returns>
         private async Task<DialogTurnResult> IntroStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
+
+            /*CnhRenovation cep = new CnhRenovation();
+
+            var webResult = await cep.obterCEP("EMULATOR", 49030549);*/
+
+
+
             List<string> options = new List<string> {
-                "Licenciamento Anual (BANESE)",
-                "Licenciamento Anual (Outros Bancos)",
-                "Emitir Documento de Circulação (CRLV-e)",
+                
+                "Serviços de Veículo",
+                "Serviços de Habilitação",
                 "Dúvidas frequentes",
                 "Nenhuma das alternativas"
+
             };
 
             // Caso o usuário escreva qualquer outro número ou somente letras, este passo se repetirá.
             var promptOptions = new PromptOptions
             {
                 Prompt = MessageFactory.Text($"Com qual destas opções eu posso te ajudar? "),
-                RetryPrompt = MessageFactory.Text("Por favor, insira uma das opções abaixo:"),
+                RetryPrompt = MessageFactory.Text("Por Favor, digite um numero de 1 a 4"),
                 Choices = ChoiceFactory.ToChoices(options),
+
             };
 
             return await stepContext.PromptAsync(nameof(ChoicePrompt), promptOptions, cancellationToken);
@@ -81,24 +96,25 @@ namespace Microsoft.BotBuilderSamples.Dialogs
         /// <param name="stepContext">Variável contendo o contexto do MainDialog, capta a resposta do passo anterior.</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
+        
         private async Task<DialogTurnResult> ActStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             // Criação de instância dos objetos utilizados durante todo o fluxo de diálogo.
             var LicenseFields = new LicenseFields();
             var CRLVeFields = new CRLVeFields();
+            var ConsultFields = new ConsultFields();
+            var MenuFields = new  MenuFields();
 
             // Recebimento da resposta do passo IntroStepAsync.
             stepContext.Values["LicenseFields"] = ((FoundChoice)stepContext.Result).Value;
 
             // Captação da plataforma em que o bot está sendo utilizado.
-            LicenseFields.plataforma = stepContext.Context.Activity.ChannelId.ToUpper();
-            CRLVeFields.plataforma = stepContext.Context.Activity.ChannelId.ToUpper();
+            MenuFields.plataforma = stepContext.Context.Activity.ChannelId.ToUpper();
 
             // Caso o usuário escreva algo maior que um número.
             if (stepContext.Context.Activity.Text.Length > 1)
             {
-                await stepContext.Context.SendActivityAsync("Por favor, digite somente o número da opção desejada (De 1 a 5).");
-
+                await stepContext.Context.SendActivityAsync("Por favor, digite somente o número da opção desejada (De 1 a 4).");
                 return await stepContext.ReplaceDialogAsync(nameof(MainDialog), default, cancellationToken);
             }
             else
@@ -109,26 +125,23 @@ namespace Microsoft.BotBuilderSamples.Dialogs
                 {
                     case "nenhuma das alternativas":
                         return await stepContext.BeginDialogAsync(nameof(RootOthersServicesDialog), LicenseFields, cancellationToken);
-                    case "licenciamento anual (banese)":
-                        LicenseFields.tipoDocumentoIn = "D";
-                        LicenseFields.Banco = "Banese";
-                        stepContext.Values["LicenseFields"] = LicenseFields;
-                        return await stepContext.BeginDialogAsync(nameof(RootLicenseDialog), LicenseFields, cancellationToken);
-                    case "licenciamento anual (outros bancos)":
-                        LicenseFields.tipoDocumentoIn = "F";
-                        LicenseFields.Banco = "Outros Bancos";
-                        stepContext.Values["LicenseFields"] = LicenseFields;
-                        return await stepContext.BeginDialogAsync(nameof(RootLicenseDialog), LicenseFields, cancellationToken);
-                    case "emitir documento de circulação (crlv-e)":
-                        stepContext.Values["CRLVeFields"] = CRLVeFields;
-                        return await stepContext.BeginDialogAsync(nameof(RootCRLVeDialog), CRLVeFields, cancellationToken);
+
+                    case "serviços de habilitação":
+                        stepContext.Values["MenuFields"] = MenuFields;
+                        return await stepContext.BeginDialogAsync(nameof(HabilitacaoMenuDialog), MenuFields, cancellationToken);
+
+                    case "serviços de veículo":
+                        stepContext.Values["MenuFields"] = MenuFields;
+                        return await stepContext.BeginDialogAsync(nameof(VehicleMenuDialog), MenuFields, cancellationToken);
+
                     case "dúvidas frequentes":
                         return await stepContext.BeginDialogAsync(nameof(RootQnaMakerDialog), CRLVeFields, cancellationToken);
+
                     default:
                         stepContext.Values["LicenseFields"] = LicenseFields;
-                        var promptOptions = new PromptOptions
+                        var promptOption2 = new PromptOptions
                         {
-                            Prompt = MessageFactory.Text("Por favor, insira uma das opções acima")
+                            RetryPrompt = MessageFactory.Text("")
                         };
 
                         return await stepContext.ReplaceDialogAsync(nameof(MainDialog), default, cancellationToken);

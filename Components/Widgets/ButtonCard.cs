@@ -117,6 +117,11 @@ namespace CoreBot.Components.Widgets
             return MessageFactory.Text("");
         }
 
+        internal IActivity addButtonExpandRenavam(ConsultaDebitosFields consultaDebitosFields)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Função responsável por gerar o botão de expandir imagens de Código de Segurança.
         /// </summary>
@@ -219,5 +224,61 @@ namespace CoreBot.Components.Widgets
             return MessageFactory.Text("");
         }
 
+
+        public IMessageActivity addButtonExpandSecureCode2(ConsultaDebitosFields ConsultaDebitosFields)
+        {
+            // Botão com link
+            if (ConsultaDebitosFields.plataforma == "EMULATOR" || ConsultaDebitosFields.plataforma == "WEBCHAT")
+            {
+                var link = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0))
+                {
+                    Actions =
+                    {
+                        new AdaptiveOpenUrlAction {
+                            Title = "Ampliar imagem",
+                            Url = new Uri("https://www.detran.se.gov.br/portal/images/codigoseg_crlve.jpeg"),
+                        },
+                    }
+                };
+
+                var button = new Attachment
+                {
+                    ContentType = AdaptiveCard.ContentType,
+                    Content = JObject.FromObject(link),
+                };
+
+                return MessageFactory.Attachment(button);
+            }
+
+            return MessageFactory.Text("");
+        }
+
+        public IMessageActivity addButtonExpandRenavamConsult (ConsultaDebitosFields ConsultaDebitosFields)
+        {
+            // Botão com link
+            if (ConsultaDebitosFields.plataforma == "EMULATOR" )
+            {
+                var link = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0))
+                {
+                    Actions =
+                    {
+                        new AdaptiveOpenUrlAction {
+                            Title = "Ampliar imagem",
+                            Url = new Uri("https://www.detran.se.gov.br/portal/images/crlve_instrucoes_renavam_placa.jpeg"),
+                        },
+                    }
+                };
+
+                var button = new Attachment
+                {
+                    ContentType = AdaptiveCard.ContentType,
+                    Content = JObject.FromObject(link),
+                };
+
+                return MessageFactory.Attachment(button);
+            }
+
+            return MessageFactory.Text("");
+        }
     }
 }

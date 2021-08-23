@@ -148,6 +148,7 @@ namespace CoreBot.Models.MethodsValidation.License
                 return invertida;
             }
 
+
             /// <summary>
             /// Adiciona 0 à esquerda de dias ou meses.
             /// </summary>
@@ -157,6 +158,28 @@ namespace CoreBot.Models.MethodsValidation.License
             {
                 if (num.Length < 2) num = "0" + num;
                 return num;
+            }
+
+            /// <summary>
+            /// Função para trocar caracteres de uma string por um "*" deixando somente o primeiro e os três ultimos caracteres originais
+            /// </summary>
+            /// <param name="phrase">String a ser convertida</param>
+            /// 
+            public static string Mascara (string phrase)
+            {
+                char[] phraseAsChars = phrase.ToCharArray();
+
+                for (int i = 1; phraseAsChars.Length >= i + 4; i++)
+                {
+                    if(phraseAsChars[i] != ' ' && phraseAsChars[i] != '.' && phraseAsChars[i-1] != ' ')
+                    {
+                        phraseAsChars[i] = '*';
+                    }
+                    
+                }
+
+                string phrase2 = new string(phraseAsChars);
+                return phrase2; 
             }
 
         }

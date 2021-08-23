@@ -48,6 +48,7 @@ namespace CoreBot.Models
             byte[] bytes = memoryStream.ToArray();
 
             return bytes;
+
         }
 
         public static void WriteDocument(Document doc, PdfWriter writer, LicenseFields LicenseFields)

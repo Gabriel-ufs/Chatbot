@@ -325,6 +325,13 @@ namespace Microsoft.BotBuilderSamples.Dialogs
 
             if (LicenseFields.tipoDocumentoIn == "F")
             {
+                var message = "Aqui está o comprovante de requerimento de serviço disponível para download";
+                var requerimento = MessageFactory.Text(message);
+                requerimento.Attachments = new List<Attachment>() { PdfProvider.Disponibilizer(RequerimentoLincese.GenerateInvoice2(LicenseFields), "Requerimento") };
+                await stepContext.Context.SendActivityAsync(requerimento);
+
+
+
                 var reply = MessageFactory.Text(info);
                 reply.Attachments = new List<Attachment>() { PdfProvider.Disponibilizer(GeneratePdfCompensacao.GenerateInvoice2(LicenseFields), "Ficha_de_compensacao") };
                 await stepContext.Context.SendActivityAsync(reply);
@@ -332,6 +339,13 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             }
             else
             {
+                var message = "Aqui está o comprovante de requerimento de serviço disponível para download";
+                var requerimento = MessageFactory.Text(message);
+                requerimento.Attachments = new List<Attachment>() { PdfProvider.Disponibilizer(RequerimentoLincese.GenerateInvoice2(LicenseFields), "Requerimento") };
+                await stepContext.Context.SendActivityAsync(requerimento);
+
+
+
                 var reply = MessageFactory.Text(info);
                 reply.Attachments = new List<Attachment>() { PdfProvider.Disponibilizer(GeneratePdfDUA.GenerateInvoice2(LicenseFields), "DUA") };
                 await stepContext.Context.SendActivityAsync(reply);

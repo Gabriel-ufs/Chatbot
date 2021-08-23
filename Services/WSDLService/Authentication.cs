@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreBot.Services.WSDLService
 {
-    public static class Authentication
+    static class Authentication
     {
         /// <summary>
         /// Função responsável por linkar endpoint do WebService.
@@ -17,14 +17,19 @@ namespace CoreBot.Services.WSDLService
             try
             {
                 //wsDetranChatBot.wsChatbotSoapClient wsClient = new wsDetranChatBot.wsChatbotSoapClient(new wsDetranChatBot.wsChatbotSoapClient.EndpointConfiguration(), "http://172.28.64.58:9176/homologa/serviceChatBot");
-                wsDetranChatBot.wsChatbotSoapClient wsClient = new wsDetranChatBot.wsChatbotSoapClient(new wsDetranChatBot.wsChatbotSoapClient.EndpointConfiguration(), "http://172.28.64.58:8176/serviceChatbot");
-                return wsClient;
+                //wsDetranChatBot.wsChatbotSoapClient wsClient = new wsDetranChatBot.wsChatbotSoapClient(new wsDetranChatBot.wsChatbotSoapClient.EndpointConfiguration(), "http://172.28.64.58:8176/serviceChatbot");
+                wsDetranChatBot.wsChatbotSoapClient wsClientDev = new wsDetranChatBot.wsChatbotSoapClient(new wsDetranChatBot.wsChatbotSoapClient.EndpointConfiguration(), "http://192.168.170.117/wsChatbot.asmx");
+                //wsDetranChatBot.wsChatbotSoapClient wsClientDev = new wsDetranChatBot.wsChatbotSoapClient(new wsDetranChatBot.wsChatbotSoapClient.EndpointConfiguration(), "http://172.22.7.56/wsChatbot.asmx");
+
+                return wsClientDev;
             }
             catch (Exception err)
             {
                 return null;
             }
+
         }
+
 
         /// <summary>
         /// Função responsável por realizar autenticação para chamadas no WebService.

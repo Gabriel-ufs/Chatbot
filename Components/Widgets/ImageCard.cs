@@ -4,7 +4,6 @@ using Microsoft.Bot.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoreBot.Components.Widgets
 {
@@ -97,6 +96,71 @@ namespace CoreBot.Components.Widgets
                             HorizontalAlignment = AdaptiveHorizontalAlignment.Center,
                             Separator = true,
                             Url = new Uri("https://www.detran.se.gov.br/portal/images/crlve_instrucoes_renavam_placa.jpeg")
+                        }
+                    }
+            };
+
+            IMessageActivity attachment = MessageFactory.Attachment(new Attachment
+            {
+                Content = card,
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Name = "cardName"
+            });
+
+            return attachment;
+        }
+
+
+        /// <summary>
+        /// Função responsável por adicionar imagem do Número de registro da habilitação.
+        /// </summary>
+        /// <returns></returns>
+        public IMessageActivity addImageResgister()
+        {
+            AdaptiveCard card = new AdaptiveCard("1.0")
+            {
+                Body =
+                    {
+                        new AdaptiveImage()
+                        {
+                            Type = "Image",
+                            Size = AdaptiveImageSize.Auto,
+                            Style = AdaptiveImageStyle.Default,
+                            HorizontalAlignment = AdaptiveHorizontalAlignment.Center,
+                            Separator = true,
+                            Url = new Uri("https://www.detran.se.gov.br/portal/images/cnh_numero_registro.jpg")
+                        }
+                    }
+            };
+
+            IMessageActivity attachment = MessageFactory.Attachment(new Attachment
+            {
+                Content = card,
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Name = "cardName"
+            });
+
+            return attachment;
+        }
+
+        /// <summary>
+        /// Função responsável por adicionar imagem do Número da habilitação.
+        /// </summary>
+        /// <returns></returns>
+        public IMessageActivity addImageCnhNumber()
+        {
+            AdaptiveCard card = new AdaptiveCard("1.0")
+            {
+                Body =
+                    {
+                        new AdaptiveImage()
+                        {
+                            Type = "Image",
+                            Size = AdaptiveImageSize.Auto,
+                            Style = AdaptiveImageStyle.Default,
+                            HorizontalAlignment = AdaptiveHorizontalAlignment.Center,
+                            Separator = true,
+                            Url = new Uri("https://www.detran.se.gov.br/portal/images/cnh_numero_impressao.jpg")
                         }
                     }
             };

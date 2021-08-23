@@ -13,23 +13,62 @@ namespace wsDetranChatBot
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", ConfigurationName="wsDetranChatBot.wsChatbotSoap")]
-    public interface wsChatbotSoap
+    internal interface wsChatbotSoap
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/efetuarServicoLicenciamento", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
-        System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> efetuarServicoLicenciamentoAsync(wsDetranChatBot.efetuarServicoLicenciamentoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/obterEmissaoCrlv", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Threading.Tasks.Task<wsDetranChatBot.obterEmissaoCrlvResponse> obterEmissaoCrlvAsync(wsDetranChatBot.obterEmissaoCrlvRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/validarServicoLicenciamento", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
         System.Threading.Tasks.Task<wsDetranChatBot.validarServicoLicenciamentoResponse> validarServicoLicenciamentoAsync(wsDetranChatBot.validarServicoLicenciamentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/efetuarServicoLicenciamento", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> efetuarServicoLicenciamentoAsync(wsDetranChatBot.efetuarServicoLicenciamentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/obterCalendarioLicenciamento", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.obterCalendarioLicenciamentoResponse> obterCalendarioLicenciamentoAsync(wsDetranChatBot.obterCalendarioLicenciamentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/validarRenovacaoHabilitacao", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.validarRenovacaoHabilitacaoResponse> validarRenovacaoHabilitacaoAsync(wsDetranChatBot.validarRenovacaoHabilitacaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/realizarServicoRenovacaoHabilitacao", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.realizarServicoRenovacaoHabilitacaoResponse> realizarServicoRenovacaoHabilitacaoAsync(wsDetranChatBot.realizarServicoRenovacaoHabilitacaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/consultarCEP", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.consultarCEPResponse> consultarCEPAsync(wsDetranChatBot.consultarCEPRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/SituacaoVeiculoLicenciamento", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.SituacaoVeiculoLicenciamentoResponse> SituacaoVeiculoLicenciamentoAsync(wsDetranChatBot.SituacaoVeiculoLicenciamentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://detran.se.gov.br/services/chatbot/validarConsultaCnh", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(alerta))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(object[]))]
+        System.Threading.Tasks.Task<wsDetranChatBot.validarConsultaCnhResponse> validarConsultaCnhAsync(wsDetranChatBot.validarConsultaCnhRequest request);
     }
     
     /// <remarks/>
@@ -76,64 +115,400 @@ namespace wsDetranChatBot
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
-    public partial class validarServicoLicenciamentoResult
+    public partial class Ocorrencias1
+    {
+        
+        private string autoInfracaoField;
+        
+        private string dtAutoField;
+        
+        private string orgAutuField;
+        
+        private string orgComField;
+        
+        private string situField;
+        
+        private string ptsAuxiVetField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string autoInfracao
+        {
+            get
+            {
+                return this.autoInfracaoField;
+            }
+            set
+            {
+                this.autoInfracaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string dtAuto
+        {
+            get
+            {
+                return this.dtAutoField;
+            }
+            set
+            {
+                this.dtAutoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string orgAutu
+        {
+            get
+            {
+                return this.orgAutuField;
+            }
+            set
+            {
+                this.orgAutuField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string orgCom
+        {
+            get
+            {
+                return this.orgComField;
+            }
+            set
+            {
+                this.orgComField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string situ
+        {
+            get
+            {
+                return this.situField;
+            }
+            set
+            {
+                this.situField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string ptsAuxiVet
+        {
+            get
+            {
+                return this.ptsAuxiVetField;
+            }
+            set
+            {
+                this.ptsAuxiVetField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class validarConsultaCNHResult
     {
         
         private int codigoRetornoField;
         
         private erro erroField;
         
-        private double codSegurancaOutField;
+        private string nroProtocoloField;
         
-        private double renavamOutField;
+        private string nroRegistroField;
+        
+        private string cnhMotoristaField;
+        
+        private string dtNascimentoField;
+        
+        private string nroProtocoloOutField;
+        
+        private string nroResgistroOutField;
+        
+        private string cnhMotoristaOutField;
+        
+        private decimal cpfMotoristaOutField;
+        
+        private string renachField;
+        
+        private string categoriaField;
+        
+        private string validadeCNHField;
+        
+        private string obsField;
+        
+        private string cnhdigitalField;
+        
+        private string dataNascimentoOutField;
+        
+        private string nomeCondutorField;
+        
+        private decimal totalCursosField;
+        
+        private string certificadoCursoField;
+        
+        private string dtInicioCursoField;
+        
+        private string dtFinalCursoField;
+        
+        private string dtValidadeCursoField;
+        
+        private string dtCadastramentoField;
+        
+        private string cursoField;
+        
+        private string situacaoCursoField;
+        
+        private decimal cnpjInstituicaoField;
+        
+        private string nomeCfcField;
+        
+        private decimal[] isnBloqField;
+        
+        private decimal ocorrenciasAutoField;
+        
+        private Ocorrencias1 ocorrenciaObjField;
+        
+        private object[] listaOcorrenciasField;
+        
+        private decimal pts2Field;
+        
+        private decimal pontos2Field;
+        
+        private decimal ocor2Field;
+        
+        private string auto2Field;
+        
+        private string dtAuto2Field;
+        
+        private string orgAuto2Field;
+        
+        private string orgComp2Field;
+        
+        private string situacao2Field;
+        
+        private decimal ptsAuxiVet2Field;
+        
+        private decimal contProcessosField;
+        
+        private decimal renavamField;
+        
+        private string placaOutField;
+        
+        private string localAutoInfraField;
+        
+        private double dtAutuacaoField;
+        
+        private double hrAutoField;
+        
+        private string municipioAutoField;
+        
+        private double velAferidaField;
+        
+        private double velPermitidaField;
+        
+        private string pontuacaoField;
+        
+        private double dataTransfField;
+        
+        private double dtcadastField;
+        
+        private double dtConferField;
+        
+        private double dtAtualizField;
+        
+        private decimal expedAutuField;
+        
+        private decimal notificacoAutuField;
+        
+        private double dtexpedField;
+        
+        private double dtNotificField;
+        
+        private string dtSuspField;
+        
+        private double dtReatField;
+        
+        private double dtCancelField;
+        
+        private double dtPgtoField;
+        
+        private decimal defesaPreviaField;
+        
+        private double dtContestacaoField;
+        
+        private decimal contInfracaoField;
+        
+        private decimal codInfracaoField;
+        
+        private string descInfracaoField;
+        
+        private string situacaoField;
+        
+        private string respaldoLegalField;
+        
+        private double valorField;
+        
+        private decimal resultadoDefesaPreviaField;
+        
+        private decimal notificacaoDefesaPreviaField;
+        
+        private decimal resultadoContestacao1Field;
+        
+        private decimal notificacaoContestacao1Field;
+        
+        private double dtContestacao2Field;
+        
+        private decimal resultadoContestacao2Field;
+        
+        private decimal notificacaoContestacao2Field;
+        
+        private decimal protocoloDefesaField;
+        
+        private decimal protocoloContest1Field;
+        
+        private decimal protocoloContest2Field;
         
         private string placaField;
         
-        private string marcaModeloField;
+        private decimal pontosField;
         
-        private string nomeProprietarioField;
+        private string autoInfracaoField;
         
-        private string temRNTRCField;
+        private string tiposImpedimentosField;
         
-        private string tipoAutorizacaoRNTRCField;
+        private string datasImpedimentosField;
         
-        private string nroAutorizacaoRNTRCField;
+        private decimal processosImpedField;
         
-        private string temIsencaoIPVAField;
+        private string statusImpedField;
         
-        private string restricaoField;
+        private string codSegcnhField;
         
-        private double[] anoLicenciamentoField;
+        private string dtValidadeCnhToxField;
         
-        private double contadorAnoLicenciamentoField;
+        private decimal contBloqField;
         
-        private recallPendente recallPendenteField;
+        private string[] obsCnhField;
         
-        private double contadorRegistroField;
+        private string[] ufDetranBloqField;
         
-        private string[] vetDescDebitosField;
+        private string[] motivoBloqField;
         
-        private double[] vetValorCotaunicaField;
+        private decimal[] dtBloqueioField;
         
-        private double[] vetValorParcela1Field;
+        private decimal[] dtInicioPenalBloqField;
         
-        private double[] vetValorParcela2Field;
+        private decimal[] dtFimPenalBloqField;
         
-        private double[] vetvalorParcela3Field;
+        private string autorizIndivField;
         
-        private double totalParcela1Field;
+        private string portImposicaoField;
         
-        private double totalParcela2Field;
+        private string infracoesSuspField;
         
-        private double totalParcela3Field;
+        private string hrInfracaoField;
         
-        private double totalCotaUnicaField;
+        private string orgAutInfracaoField;
         
-        private double indiceMensagemField;
+        private string orgCompSuspenField;
         
-        private double[] vetCodMensagemField;
+        private string situacaoSuspenField;
         
-        private string[] vetMensagemDuaField;
+        private char ptsAuxVetSuspenField;
+        
+        private string descSuspensaoField;
+        
+        private string baseLegalField;
+        
+        private decimal qtDiasField;
+        
+        private string dtExpedApField;
+        
+        private string arExpedApField;
+        
+        private string dtNotificApField;
+        
+        private string limiteDefesaField;
+        
+        private string dtexpedIsField;
+        
+        private string arExpedIsField;
+        
+        private string dtNotificIsField;
+        
+        private string limiteRecurso1ImpField;
+        
+        private string dtExpedDdField;
+        
+        private string arExpedDdField;
+        
+        private string dtNotififDdField;
+        
+        private string limiteEntregaImpedField;
+        
+        private string descDevolucaoField;
+        
+        private string dtDevolucaoField;
+        
+        private decimal processoDefesaField;
+        
+        private string dtEntradaDefesaField;
+        
+        private string situDefesaField;
+        
+        private string dtJulgamentoDefField;
+        
+        private string obsDefesaField;
+        
+        private decimal pprocessoRecurso1Field;
+        
+        private string dtEntregaRecurso1Field;
+        
+        private string situRecurso1Field;
+        
+        private string dtJulgamentoRecu1Field;
+        
+        private string obsRecurso1Field;
+        
+        private decimal pprocessoRecurso2Field;
+        
+        private string dtEntradaRecur2Field;
+        
+        private string situRecurso2Field;
+        
+        private string dtJulgamentoRecur2Field;
+        
+        private string obsRecurso2Field;
+        
+        private string descCertificadoField;
+        
+        private string descExameField;
+        
+        private string dtCertificadoField;
+        
+        private string dtExameField;
+        
+        private string resultExameField;
+        
+        private string txtRecolhimentoField;
+        
+        private string localField;
+        
+        private double dtSuspensaoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -165,34 +540,1098 @@ namespace wsDetranChatBot
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public double codSegurancaOut
+        public string nroProtocolo
         {
             get
             {
-                return this.codSegurancaOutField;
+                return this.nroProtocoloField;
             }
             set
             {
-                this.codSegurancaOutField = value;
+                this.nroProtocoloField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public double renavamOut
+        public string nroRegistro
         {
             get
             {
-                return this.renavamOutField;
+                return this.nroRegistroField;
             }
             set
             {
-                this.renavamOutField = value;
+                this.nroRegistroField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string cnhMotorista
+        {
+            get
+            {
+                return this.cnhMotoristaField;
+            }
+            set
+            {
+                this.cnhMotoristaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string dtNascimento
+        {
+            get
+            {
+                return this.dtNascimentoField;
+            }
+            set
+            {
+                this.dtNascimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string nroProtocoloOut
+        {
+            get
+            {
+                return this.nroProtocoloOutField;
+            }
+            set
+            {
+                this.nroProtocoloOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string nroResgistroOut
+        {
+            get
+            {
+                return this.nroResgistroOutField;
+            }
+            set
+            {
+                this.nroResgistroOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string cnhMotoristaOut
+        {
+            get
+            {
+                return this.cnhMotoristaOutField;
+            }
+            set
+            {
+                this.cnhMotoristaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public decimal cpfMotoristaOut
+        {
+            get
+            {
+                return this.cpfMotoristaOutField;
+            }
+            set
+            {
+                this.cpfMotoristaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string renach
+        {
+            get
+            {
+                return this.renachField;
+            }
+            set
+            {
+                this.renachField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string categoria
+        {
+            get
+            {
+                return this.categoriaField;
+            }
+            set
+            {
+                this.categoriaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string validadeCNH
+        {
+            get
+            {
+                return this.validadeCNHField;
+            }
+            set
+            {
+                this.validadeCNHField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string obs
+        {
+            get
+            {
+                return this.obsField;
+            }
+            set
+            {
+                this.obsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string cnhdigital
+        {
+            get
+            {
+                return this.cnhdigitalField;
+            }
+            set
+            {
+                this.cnhdigitalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string dataNascimentoOut
+        {
+            get
+            {
+                return this.dataNascimentoOutField;
+            }
+            set
+            {
+                this.dataNascimentoOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string nomeCondutor
+        {
+            get
+            {
+                return this.nomeCondutorField;
+            }
+            set
+            {
+                this.nomeCondutorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public decimal totalCursos
+        {
+            get
+            {
+                return this.totalCursosField;
+            }
+            set
+            {
+                this.totalCursosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string certificadoCurso
+        {
+            get
+            {
+                return this.certificadoCursoField;
+            }
+            set
+            {
+                this.certificadoCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string dtInicioCurso
+        {
+            get
+            {
+                return this.dtInicioCursoField;
+            }
+            set
+            {
+                this.dtInicioCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string dtFinalCurso
+        {
+            get
+            {
+                return this.dtFinalCursoField;
+            }
+            set
+            {
+                this.dtFinalCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string dtValidadeCurso
+        {
+            get
+            {
+                return this.dtValidadeCursoField;
+            }
+            set
+            {
+                this.dtValidadeCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string dtCadastramento
+        {
+            get
+            {
+                return this.dtCadastramentoField;
+            }
+            set
+            {
+                this.dtCadastramentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string curso
+        {
+            get
+            {
+                return this.cursoField;
+            }
+            set
+            {
+                this.cursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string situacaoCurso
+        {
+            get
+            {
+                return this.situacaoCursoField;
+            }
+            set
+            {
+                this.situacaoCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public decimal cnpjInstituicao
+        {
+            get
+            {
+                return this.cnpjInstituicaoField;
+            }
+            set
+            {
+                this.cnpjInstituicaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string nomeCfc
+        {
+            get
+            {
+                return this.nomeCfcField;
+            }
+            set
+            {
+                this.nomeCfcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=27)]
+        public decimal[] isnBloq
+        {
+            get
+            {
+                return this.isnBloqField;
+            }
+            set
+            {
+                this.isnBloqField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public decimal ocorrenciasAuto
+        {
+            get
+            {
+                return this.ocorrenciasAutoField;
+            }
+            set
+            {
+                this.ocorrenciasAutoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public Ocorrencias1 ocorrenciaObj
+        {
+            get
+            {
+                return this.ocorrenciaObjField;
+            }
+            set
+            {
+                this.ocorrenciaObjField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=30)]
+        public object[] listaOcorrencias
+        {
+            get
+            {
+                return this.listaOcorrenciasField;
+            }
+            set
+            {
+                this.listaOcorrenciasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public decimal pts2
+        {
+            get
+            {
+                return this.pts2Field;
+            }
+            set
+            {
+                this.pts2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public decimal pontos2
+        {
+            get
+            {
+                return this.pontos2Field;
+            }
+            set
+            {
+                this.pontos2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public decimal ocor2
+        {
+            get
+            {
+                return this.ocor2Field;
+            }
+            set
+            {
+                this.ocor2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string auto2
+        {
+            get
+            {
+                return this.auto2Field;
+            }
+            set
+            {
+                this.auto2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string dtAuto2
+        {
+            get
+            {
+                return this.dtAuto2Field;
+            }
+            set
+            {
+                this.dtAuto2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string orgAuto2
+        {
+            get
+            {
+                return this.orgAuto2Field;
+            }
+            set
+            {
+                this.orgAuto2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string orgComp2
+        {
+            get
+            {
+                return this.orgComp2Field;
+            }
+            set
+            {
+                this.orgComp2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public string situacao2
+        {
+            get
+            {
+                return this.situacao2Field;
+            }
+            set
+            {
+                this.situacao2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public decimal ptsAuxiVet2
+        {
+            get
+            {
+                return this.ptsAuxiVet2Field;
+            }
+            set
+            {
+                this.ptsAuxiVet2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public decimal contProcessos
+        {
+            get
+            {
+                return this.contProcessosField;
+            }
+            set
+            {
+                this.contProcessosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public decimal renavam
+        {
+            get
+            {
+                return this.renavamField;
+            }
+            set
+            {
+                this.renavamField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public string placaOut
+        {
+            get
+            {
+                return this.placaOutField;
+            }
+            set
+            {
+                this.placaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public string localAutoInfra
+        {
+            get
+            {
+                return this.localAutoInfraField;
+            }
+            set
+            {
+                this.localAutoInfraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
+        public double dtAutuacao
+        {
+            get
+            {
+                return this.dtAutuacaoField;
+            }
+            set
+            {
+                this.dtAutuacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public double hrAuto
+        {
+            get
+            {
+                return this.hrAutoField;
+            }
+            set
+            {
+                this.hrAutoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public string municipioAuto
+        {
+            get
+            {
+                return this.municipioAutoField;
+            }
+            set
+            {
+                this.municipioAutoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=47)]
+        public double velAferida
+        {
+            get
+            {
+                return this.velAferidaField;
+            }
+            set
+            {
+                this.velAferidaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public double velPermitida
+        {
+            get
+            {
+                return this.velPermitidaField;
+            }
+            set
+            {
+                this.velPermitidaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        public string pontuacao
+        {
+            get
+            {
+                return this.pontuacaoField;
+            }
+            set
+            {
+                this.pontuacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public double dataTransf
+        {
+            get
+            {
+                return this.dataTransfField;
+            }
+            set
+            {
+                this.dataTransfField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
+        public double dtcadast
+        {
+            get
+            {
+                return this.dtcadastField;
+            }
+            set
+            {
+                this.dtcadastField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public double dtConfer
+        {
+            get
+            {
+                return this.dtConferField;
+            }
+            set
+            {
+                this.dtConferField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=53)]
+        public double dtAtualiz
+        {
+            get
+            {
+                return this.dtAtualizField;
+            }
+            set
+            {
+                this.dtAtualizField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=54)]
+        public decimal expedAutu
+        {
+            get
+            {
+                return this.expedAutuField;
+            }
+            set
+            {
+                this.expedAutuField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public decimal notificacoAutu
+        {
+            get
+            {
+                return this.notificacoAutuField;
+            }
+            set
+            {
+                this.notificacoAutuField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=56)]
+        public double dtexped
+        {
+            get
+            {
+                return this.dtexpedField;
+            }
+            set
+            {
+                this.dtexpedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=57)]
+        public double dtNotific
+        {
+            get
+            {
+                return this.dtNotificField;
+            }
+            set
+            {
+                this.dtNotificField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        public string dtSusp
+        {
+            get
+            {
+                return this.dtSuspField;
+            }
+            set
+            {
+                this.dtSuspField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=59)]
+        public double dtReat
+        {
+            get
+            {
+                return this.dtReatField;
+            }
+            set
+            {
+                this.dtReatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=60)]
+        public double dtCancel
+        {
+            get
+            {
+                return this.dtCancelField;
+            }
+            set
+            {
+                this.dtCancelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        public double dtPgto
+        {
+            get
+            {
+                return this.dtPgtoField;
+            }
+            set
+            {
+                this.dtPgtoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        public decimal defesaPrevia
+        {
+            get
+            {
+                return this.defesaPreviaField;
+            }
+            set
+            {
+                this.defesaPreviaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=63)]
+        public double dtContestacao
+        {
+            get
+            {
+                return this.dtContestacaoField;
+            }
+            set
+            {
+                this.dtContestacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        public decimal contInfracao
+        {
+            get
+            {
+                return this.contInfracaoField;
+            }
+            set
+            {
+                this.contInfracaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        public decimal codInfracao
+        {
+            get
+            {
+                return this.codInfracaoField;
+            }
+            set
+            {
+                this.codInfracaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        public string descInfracao
+        {
+            get
+            {
+                return this.descInfracaoField;
+            }
+            set
+            {
+                this.descInfracaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        public string situacao
+        {
+            get
+            {
+                return this.situacaoField;
+            }
+            set
+            {
+                this.situacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        public string respaldoLegal
+        {
+            get
+            {
+                return this.respaldoLegalField;
+            }
+            set
+            {
+                this.respaldoLegalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
+        public double valor
+        {
+            get
+            {
+                return this.valorField;
+            }
+            set
+            {
+                this.valorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        public decimal resultadoDefesaPrevia
+        {
+            get
+            {
+                return this.resultadoDefesaPreviaField;
+            }
+            set
+            {
+                this.resultadoDefesaPreviaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
+        public decimal notificacaoDefesaPrevia
+        {
+            get
+            {
+                return this.notificacaoDefesaPreviaField;
+            }
+            set
+            {
+                this.notificacaoDefesaPreviaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=72)]
+        public decimal resultadoContestacao1
+        {
+            get
+            {
+                return this.resultadoContestacao1Field;
+            }
+            set
+            {
+                this.resultadoContestacao1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=73)]
+        public decimal notificacaoContestacao1
+        {
+            get
+            {
+                return this.notificacaoContestacao1Field;
+            }
+            set
+            {
+                this.notificacaoContestacao1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
+        public double dtContestacao2
+        {
+            get
+            {
+                return this.dtContestacao2Field;
+            }
+            set
+            {
+                this.dtContestacao2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
+        public decimal resultadoContestacao2
+        {
+            get
+            {
+                return this.resultadoContestacao2Field;
+            }
+            set
+            {
+                this.resultadoContestacao2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=76)]
+        public decimal notificacaoContestacao2
+        {
+            get
+            {
+                return this.notificacaoContestacao2Field;
+            }
+            set
+            {
+                this.notificacaoContestacao2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=77)]
+        public decimal protocoloDefesa
+        {
+            get
+            {
+                return this.protocoloDefesaField;
+            }
+            set
+            {
+                this.protocoloDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=78)]
+        public decimal protocoloContest1
+        {
+            get
+            {
+                return this.protocoloContest1Field;
+            }
+            set
+            {
+                this.protocoloContest1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=79)]
+        public decimal protocoloContest2
+        {
+            get
+            {
+                return this.protocoloContest2Field;
+            }
+            set
+            {
+                this.protocoloContest2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=80)]
         public string placa
         {
             get
@@ -206,324 +1645,884 @@ namespace wsDetranChatBot
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string marcaModelo
+        [System.Xml.Serialization.XmlElementAttribute(Order=81)]
+        public decimal pontos
         {
             get
             {
-                return this.marcaModeloField;
+                return this.pontosField;
             }
             set
             {
-                this.marcaModeloField = value;
+                this.pontosField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string nomeProprietario
+        [System.Xml.Serialization.XmlElementAttribute(Order=82)]
+        public string autoInfracao
         {
             get
             {
-                return this.nomeProprietarioField;
+                return this.autoInfracaoField;
             }
             set
             {
-                this.nomeProprietarioField = value;
+                this.autoInfracaoField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public string temRNTRC
+        [System.Xml.Serialization.XmlElementAttribute(Order=83)]
+        public string tiposImpedimentos
         {
             get
             {
-                return this.temRNTRCField;
+                return this.tiposImpedimentosField;
             }
             set
             {
-                this.temRNTRCField = value;
+                this.tiposImpedimentosField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public string tipoAutorizacaoRNTRC
+        [System.Xml.Serialization.XmlElementAttribute(Order=84)]
+        public string datasImpedimentos
         {
             get
             {
-                return this.tipoAutorizacaoRNTRCField;
+                return this.datasImpedimentosField;
             }
             set
             {
-                this.tipoAutorizacaoRNTRCField = value;
+                this.datasImpedimentosField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public string nroAutorizacaoRNTRC
+        [System.Xml.Serialization.XmlElementAttribute(Order=85)]
+        public decimal processosImped
         {
             get
             {
-                return this.nroAutorizacaoRNTRCField;
+                return this.processosImpedField;
             }
             set
             {
-                this.nroAutorizacaoRNTRCField = value;
+                this.processosImpedField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
-        public string temIsencaoIPVA
+        [System.Xml.Serialization.XmlElementAttribute(Order=86)]
+        public string statusImped
         {
             get
             {
-                return this.temIsencaoIPVAField;
+                return this.statusImpedField;
             }
             set
             {
-                this.temIsencaoIPVAField = value;
+                this.statusImpedField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
-        public string restricao
+        [System.Xml.Serialization.XmlElementAttribute(Order=87)]
+        public string codSegcnh
         {
             get
             {
-                return this.restricaoField;
+                return this.codSegcnhField;
             }
             set
             {
-                this.restricaoField = value;
+                this.codSegcnhField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
-        public double[] anoLicenciamento
+        [System.Xml.Serialization.XmlElementAttribute(Order=88)]
+        public string dtValidadeCnhTox
         {
             get
             {
-                return this.anoLicenciamentoField;
+                return this.dtValidadeCnhToxField;
             }
             set
             {
-                this.anoLicenciamentoField = value;
+                this.dtValidadeCnhToxField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
-        public double contadorAnoLicenciamento
+        [System.Xml.Serialization.XmlElementAttribute(Order=89)]
+        public decimal contBloq
         {
             get
             {
-                return this.contadorAnoLicenciamentoField;
+                return this.contBloqField;
             }
             set
             {
-                this.contadorAnoLicenciamentoField = value;
+                this.contBloqField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
-        public recallPendente recallPendente
+        [System.Xml.Serialization.XmlArrayAttribute(Order=90)]
+        public string[] obsCnh
         {
             get
             {
-                return this.recallPendenteField;
+                return this.obsCnhField;
             }
             set
             {
-                this.recallPendenteField = value;
+                this.obsCnhField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
-        public double contadorRegistro
+        [System.Xml.Serialization.XmlArrayAttribute(Order=91)]
+        public string[] ufDetranBloq
         {
             get
             {
-                return this.contadorRegistroField;
+                return this.ufDetranBloqField;
             }
             set
             {
-                this.contadorRegistroField = value;
+                this.ufDetranBloqField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=16)]
-        public string[] vetDescDebitos
+        [System.Xml.Serialization.XmlArrayAttribute(Order=92)]
+        public string[] motivoBloq
         {
             get
             {
-                return this.vetDescDebitosField;
+                return this.motivoBloqField;
             }
             set
             {
-                this.vetDescDebitosField = value;
+                this.motivoBloqField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=17)]
-        public double[] vetValorCotaunica
+        [System.Xml.Serialization.XmlArrayAttribute(Order=93)]
+        public decimal[] dtBloqueio
         {
             get
             {
-                return this.vetValorCotaunicaField;
+                return this.dtBloqueioField;
             }
             set
             {
-                this.vetValorCotaunicaField = value;
+                this.dtBloqueioField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=18)]
-        public double[] vetValorParcela1
+        [System.Xml.Serialization.XmlArrayAttribute(Order=94)]
+        public decimal[] dtInicioPenalBloq
         {
             get
             {
-                return this.vetValorParcela1Field;
+                return this.dtInicioPenalBloqField;
             }
             set
             {
-                this.vetValorParcela1Field = value;
+                this.dtInicioPenalBloqField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=19)]
-        public double[] vetValorParcela2
+        [System.Xml.Serialization.XmlArrayAttribute(Order=95)]
+        public decimal[] dtFimPenalBloq
         {
             get
             {
-                return this.vetValorParcela2Field;
+                return this.dtFimPenalBloqField;
             }
             set
             {
-                this.vetValorParcela2Field = value;
+                this.dtFimPenalBloqField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=20)]
-        public double[] vetvalorParcela3
+        [System.Xml.Serialization.XmlElementAttribute(Order=96)]
+        public string autorizIndiv
         {
             get
             {
-                return this.vetvalorParcela3Field;
+                return this.autorizIndivField;
             }
             set
             {
-                this.vetvalorParcela3Field = value;
+                this.autorizIndivField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
-        public double totalParcela1
+        [System.Xml.Serialization.XmlElementAttribute(Order=97)]
+        public string portImposicao
         {
             get
             {
-                return this.totalParcela1Field;
+                return this.portImposicaoField;
             }
             set
             {
-                this.totalParcela1Field = value;
+                this.portImposicaoField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
-        public double totalParcela2
+        [System.Xml.Serialization.XmlElementAttribute(Order=98)]
+        public string infracoesSusp
         {
             get
             {
-                return this.totalParcela2Field;
+                return this.infracoesSuspField;
             }
             set
             {
-                this.totalParcela2Field = value;
+                this.infracoesSuspField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
-        public double totalParcela3
+        [System.Xml.Serialization.XmlElementAttribute(Order=99)]
+        public string hrInfracao
         {
             get
             {
-                return this.totalParcela3Field;
+                return this.hrInfracaoField;
             }
             set
             {
-                this.totalParcela3Field = value;
+                this.hrInfracaoField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
-        public double totalCotaUnica
+        [System.Xml.Serialization.XmlElementAttribute(Order=100)]
+        public string orgAutInfracao
         {
             get
             {
-                return this.totalCotaUnicaField;
+                return this.orgAutInfracaoField;
             }
             set
             {
-                this.totalCotaUnicaField = value;
+                this.orgAutInfracaoField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
-        public double indiceMensagem
+        [System.Xml.Serialization.XmlElementAttribute(Order=101)]
+        public string orgCompSuspen
         {
             get
             {
-                return this.indiceMensagemField;
+                return this.orgCompSuspenField;
             }
             set
             {
-                this.indiceMensagemField = value;
+                this.orgCompSuspenField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=26)]
-        public double[] vetCodMensagem
+        [System.Xml.Serialization.XmlElementAttribute(Order=102)]
+        public string situacaoSuspen
         {
             get
             {
-                return this.vetCodMensagemField;
+                return this.situacaoSuspenField;
             }
             set
             {
-                this.vetCodMensagemField = value;
+                this.situacaoSuspenField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=27)]
-        public string[] vetMensagemDua
+        [System.Xml.Serialization.XmlElementAttribute(Order=103)]
+        public char ptsAuxVetSuspen
         {
             get
             {
-                return this.vetMensagemDuaField;
+                return this.ptsAuxVetSuspenField;
             }
             set
             {
-                this.vetMensagemDuaField = value;
+                this.ptsAuxVetSuspenField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=104)]
+        public string descSuspensao
+        {
+            get
+            {
+                return this.descSuspensaoField;
+            }
+            set
+            {
+                this.descSuspensaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=105)]
+        public string baseLegal
+        {
+            get
+            {
+                return this.baseLegalField;
+            }
+            set
+            {
+                this.baseLegalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=106)]
+        public decimal qtDias
+        {
+            get
+            {
+                return this.qtDiasField;
+            }
+            set
+            {
+                this.qtDiasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=107)]
+        public string dtExpedAp
+        {
+            get
+            {
+                return this.dtExpedApField;
+            }
+            set
+            {
+                this.dtExpedApField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=108)]
+        public string arExpedAp
+        {
+            get
+            {
+                return this.arExpedApField;
+            }
+            set
+            {
+                this.arExpedApField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=109)]
+        public string dtNotificAp
+        {
+            get
+            {
+                return this.dtNotificApField;
+            }
+            set
+            {
+                this.dtNotificApField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=110)]
+        public string limiteDefesa
+        {
+            get
+            {
+                return this.limiteDefesaField;
+            }
+            set
+            {
+                this.limiteDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=111)]
+        public string dtexpedIs
+        {
+            get
+            {
+                return this.dtexpedIsField;
+            }
+            set
+            {
+                this.dtexpedIsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=112)]
+        public string arExpedIs
+        {
+            get
+            {
+                return this.arExpedIsField;
+            }
+            set
+            {
+                this.arExpedIsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=113)]
+        public string dtNotificIs
+        {
+            get
+            {
+                return this.dtNotificIsField;
+            }
+            set
+            {
+                this.dtNotificIsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=114)]
+        public string limiteRecurso1Imp
+        {
+            get
+            {
+                return this.limiteRecurso1ImpField;
+            }
+            set
+            {
+                this.limiteRecurso1ImpField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=115)]
+        public string dtExpedDd
+        {
+            get
+            {
+                return this.dtExpedDdField;
+            }
+            set
+            {
+                this.dtExpedDdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=116)]
+        public string arExpedDd
+        {
+            get
+            {
+                return this.arExpedDdField;
+            }
+            set
+            {
+                this.arExpedDdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=117)]
+        public string dtNotififDd
+        {
+            get
+            {
+                return this.dtNotififDdField;
+            }
+            set
+            {
+                this.dtNotififDdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=118)]
+        public string limiteEntregaImped
+        {
+            get
+            {
+                return this.limiteEntregaImpedField;
+            }
+            set
+            {
+                this.limiteEntregaImpedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=119)]
+        public string descDevolucao
+        {
+            get
+            {
+                return this.descDevolucaoField;
+            }
+            set
+            {
+                this.descDevolucaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=120)]
+        public string dtDevolucao
+        {
+            get
+            {
+                return this.dtDevolucaoField;
+            }
+            set
+            {
+                this.dtDevolucaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=121)]
+        public decimal processoDefesa
+        {
+            get
+            {
+                return this.processoDefesaField;
+            }
+            set
+            {
+                this.processoDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=122)]
+        public string dtEntradaDefesa
+        {
+            get
+            {
+                return this.dtEntradaDefesaField;
+            }
+            set
+            {
+                this.dtEntradaDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=123)]
+        public string situDefesa
+        {
+            get
+            {
+                return this.situDefesaField;
+            }
+            set
+            {
+                this.situDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=124)]
+        public string dtJulgamentoDef
+        {
+            get
+            {
+                return this.dtJulgamentoDefField;
+            }
+            set
+            {
+                this.dtJulgamentoDefField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=125)]
+        public string obsDefesa
+        {
+            get
+            {
+                return this.obsDefesaField;
+            }
+            set
+            {
+                this.obsDefesaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=126)]
+        public decimal pprocessoRecurso1
+        {
+            get
+            {
+                return this.pprocessoRecurso1Field;
+            }
+            set
+            {
+                this.pprocessoRecurso1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=127)]
+        public string dtEntregaRecurso1
+        {
+            get
+            {
+                return this.dtEntregaRecurso1Field;
+            }
+            set
+            {
+                this.dtEntregaRecurso1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=128)]
+        public string situRecurso1
+        {
+            get
+            {
+                return this.situRecurso1Field;
+            }
+            set
+            {
+                this.situRecurso1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=129)]
+        public string dtJulgamentoRecu1
+        {
+            get
+            {
+                return this.dtJulgamentoRecu1Field;
+            }
+            set
+            {
+                this.dtJulgamentoRecu1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=130)]
+        public string obsRecurso1
+        {
+            get
+            {
+                return this.obsRecurso1Field;
+            }
+            set
+            {
+                this.obsRecurso1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=131)]
+        public decimal pprocessoRecurso2
+        {
+            get
+            {
+                return this.pprocessoRecurso2Field;
+            }
+            set
+            {
+                this.pprocessoRecurso2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=132)]
+        public string dtEntradaRecur2
+        {
+            get
+            {
+                return this.dtEntradaRecur2Field;
+            }
+            set
+            {
+                this.dtEntradaRecur2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=133)]
+        public string situRecurso2
+        {
+            get
+            {
+                return this.situRecurso2Field;
+            }
+            set
+            {
+                this.situRecurso2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=134)]
+        public string dtJulgamentoRecur2
+        {
+            get
+            {
+                return this.dtJulgamentoRecur2Field;
+            }
+            set
+            {
+                this.dtJulgamentoRecur2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=135)]
+        public string obsRecurso2
+        {
+            get
+            {
+                return this.obsRecurso2Field;
+            }
+            set
+            {
+                this.obsRecurso2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=136)]
+        public string descCertificado
+        {
+            get
+            {
+                return this.descCertificadoField;
+            }
+            set
+            {
+                this.descCertificadoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=137)]
+        public string descExame
+        {
+            get
+            {
+                return this.descExameField;
+            }
+            set
+            {
+                this.descExameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=138)]
+        public string dtCertificado
+        {
+            get
+            {
+                return this.dtCertificadoField;
+            }
+            set
+            {
+                this.dtCertificadoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=139)]
+        public string dtExame
+        {
+            get
+            {
+                return this.dtExameField;
+            }
+            set
+            {
+                this.dtExameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=140)]
+        public string resultExame
+        {
+            get
+            {
+                return this.resultExameField;
+            }
+            set
+            {
+                this.resultExameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=141)]
+        public string txtRecolhimento
+        {
+            get
+            {
+                return this.txtRecolhimentoField;
+            }
+            set
+            {
+                this.txtRecolhimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=142)]
+        public string local
+        {
+            get
+            {
+                return this.localField;
+            }
+            set
+            {
+                this.localField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=143)]
+        public double dtSuspensao
+        {
+            get
+            {
+                return this.dtSuspensaoField;
+            }
+            set
+            {
+                this.dtSuspensaoField = value;
             }
         }
     }
@@ -662,22 +2661,1038 @@ namespace wsDetranChatBot
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
-    public partial class obterEmissaoCrlvResult
+    public partial class realizarSituacaoVeiculoResult
+    {
+        
+        private erro erroField;
+        
+        private int codigoRetornoField;
+        
+        private double vRenavamField;
+        
+        private string placaField;
+        
+        private double codSegurancaField;
+        
+        private string chassiField;
+        
+        private int codServicoField;
+        
+        private int codPagamentoAvulsoField;
+        
+        private string localEntregaField;
+        
+        private int dataPagamentoField;
+        
+        private int tipoDuaField;
+        
+        private decimal exercicioField;
+        
+        private string flagLicenciarField;
+        
+        private int copiaCrlvField;
+        
+        private int procedenciaBoatField;
+        
+        private int origemField;
+        
+        private int tipoServicoLacreField;
+        
+        private int parcelasField;
+        
+        private string flagIsencaoMotoField;
+        
+        private string flagCiclomotorField;
+        
+        private string flagLiberacaoVeiculoField;
+        
+        private string flagServicoLojaPlacaField;
+        
+        private string flagVistoriaEscolarField;
+        
+        private string vistoriaForaSedeField;
+        
+        private string vistoriaTransitoField;
+        
+        private string porteVeiculoField;
+        
+        private string flagVeiculoCustodiadoField;
+        
+        private string tipoPagamentoField;
+        
+        private int totRegistrosField;
+        
+        private double totalParcela1Field;
+        
+        private double totalParcela2Field;
+        
+        private double totalParcela3Field;
+        
+        private double totalCotaUnicaField;
+        
+        private int indMensagemField;
+        
+        private int flagImpedimentoField;
+        
+        private string msgImpedimentoField;
+        
+        private string servicoLojaPlacaField;
+        
+        private string[] vetDescDebitosField;
+        
+        private decimal[] vetValorCotaunicaField;
+        
+        private decimal[] vetValorParcela1Field;
+        
+        private decimal[] vetValorParcela2Field;
+        
+        private decimal[] vetvalorParcela3Field;
+        
+        private decimal[] vetCodMensagemField;
+        
+        private string[] vetMensagemDuaField;
+        
+        private decimal[] vAnosField;
+        
+        private decimal vContAnosField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int codigoRetorno
+        {
+            get
+            {
+                return this.codigoRetornoField;
+            }
+            set
+            {
+                this.codigoRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double vRenavam
+        {
+            get
+            {
+                return this.vRenavamField;
+            }
+            set
+            {
+                this.vRenavamField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string placa
+        {
+            get
+            {
+                return this.placaField;
+            }
+            set
+            {
+                this.placaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public double codSeguranca
+        {
+            get
+            {
+                return this.codSegurancaField;
+            }
+            set
+            {
+                this.codSegurancaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string chassi
+        {
+            get
+            {
+                return this.chassiField;
+            }
+            set
+            {
+                this.chassiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public int codServico
+        {
+            get
+            {
+                return this.codServicoField;
+            }
+            set
+            {
+                this.codServicoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public int codPagamentoAvulso
+        {
+            get
+            {
+                return this.codPagamentoAvulsoField;
+            }
+            set
+            {
+                this.codPagamentoAvulsoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string localEntrega
+        {
+            get
+            {
+                return this.localEntregaField;
+            }
+            set
+            {
+                this.localEntregaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public int dataPagamento
+        {
+            get
+            {
+                return this.dataPagamentoField;
+            }
+            set
+            {
+                this.dataPagamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public int tipoDua
+        {
+            get
+            {
+                return this.tipoDuaField;
+            }
+            set
+            {
+                this.tipoDuaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public decimal exercicio
+        {
+            get
+            {
+                return this.exercicioField;
+            }
+            set
+            {
+                this.exercicioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string flagLicenciar
+        {
+            get
+            {
+                return this.flagLicenciarField;
+            }
+            set
+            {
+                this.flagLicenciarField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public int copiaCrlv
+        {
+            get
+            {
+                return this.copiaCrlvField;
+            }
+            set
+            {
+                this.copiaCrlvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public int procedenciaBoat
+        {
+            get
+            {
+                return this.procedenciaBoatField;
+            }
+            set
+            {
+                this.procedenciaBoatField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public int origem
+        {
+            get
+            {
+                return this.origemField;
+            }
+            set
+            {
+                this.origemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public int tipoServicoLacre
+        {
+            get
+            {
+                return this.tipoServicoLacreField;
+            }
+            set
+            {
+                this.tipoServicoLacreField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public int parcelas
+        {
+            get
+            {
+                return this.parcelasField;
+            }
+            set
+            {
+                this.parcelasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string flagIsencaoMoto
+        {
+            get
+            {
+                return this.flagIsencaoMotoField;
+            }
+            set
+            {
+                this.flagIsencaoMotoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string flagCiclomotor
+        {
+            get
+            {
+                return this.flagCiclomotorField;
+            }
+            set
+            {
+                this.flagCiclomotorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string flagLiberacaoVeiculo
+        {
+            get
+            {
+                return this.flagLiberacaoVeiculoField;
+            }
+            set
+            {
+                this.flagLiberacaoVeiculoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string flagServicoLojaPlaca
+        {
+            get
+            {
+                return this.flagServicoLojaPlacaField;
+            }
+            set
+            {
+                this.flagServicoLojaPlacaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string flagVistoriaEscolar
+        {
+            get
+            {
+                return this.flagVistoriaEscolarField;
+            }
+            set
+            {
+                this.flagVistoriaEscolarField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string vistoriaForaSede
+        {
+            get
+            {
+                return this.vistoriaForaSedeField;
+            }
+            set
+            {
+                this.vistoriaForaSedeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string vistoriaTransito
+        {
+            get
+            {
+                return this.vistoriaTransitoField;
+            }
+            set
+            {
+                this.vistoriaTransitoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string porteVeiculo
+        {
+            get
+            {
+                return this.porteVeiculoField;
+            }
+            set
+            {
+                this.porteVeiculoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string flagVeiculoCustodiado
+        {
+            get
+            {
+                return this.flagVeiculoCustodiadoField;
+            }
+            set
+            {
+                this.flagVeiculoCustodiadoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string tipoPagamento
+        {
+            get
+            {
+                return this.tipoPagamentoField;
+            }
+            set
+            {
+                this.tipoPagamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public int totRegistros
+        {
+            get
+            {
+                return this.totRegistrosField;
+            }
+            set
+            {
+                this.totRegistrosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public double totalParcela1
+        {
+            get
+            {
+                return this.totalParcela1Field;
+            }
+            set
+            {
+                this.totalParcela1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public double totalParcela2
+        {
+            get
+            {
+                return this.totalParcela2Field;
+            }
+            set
+            {
+                this.totalParcela2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public double totalParcela3
+        {
+            get
+            {
+                return this.totalParcela3Field;
+            }
+            set
+            {
+                this.totalParcela3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public double totalCotaUnica
+        {
+            get
+            {
+                return this.totalCotaUnicaField;
+            }
+            set
+            {
+                this.totalCotaUnicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public int indMensagem
+        {
+            get
+            {
+                return this.indMensagemField;
+            }
+            set
+            {
+                this.indMensagemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public int flagImpedimento
+        {
+            get
+            {
+                return this.flagImpedimentoField;
+            }
+            set
+            {
+                this.flagImpedimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string msgImpedimento
+        {
+            get
+            {
+                return this.msgImpedimentoField;
+            }
+            set
+            {
+                this.msgImpedimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string ServicoLojaPlaca
+        {
+            get
+            {
+                return this.servicoLojaPlacaField;
+            }
+            set
+            {
+                this.servicoLojaPlacaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=37)]
+        public string[] vetDescDebitos
+        {
+            get
+            {
+                return this.vetDescDebitosField;
+            }
+            set
+            {
+                this.vetDescDebitosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=38)]
+        public decimal[] vetValorCotaunica
+        {
+            get
+            {
+                return this.vetValorCotaunicaField;
+            }
+            set
+            {
+                this.vetValorCotaunicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=39)]
+        public decimal[] vetValorParcela1
+        {
+            get
+            {
+                return this.vetValorParcela1Field;
+            }
+            set
+            {
+                this.vetValorParcela1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=40)]
+        public decimal[] vetValorParcela2
+        {
+            get
+            {
+                return this.vetValorParcela2Field;
+            }
+            set
+            {
+                this.vetValorParcela2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=41)]
+        public decimal[] vetvalorParcela3
+        {
+            get
+            {
+                return this.vetvalorParcela3Field;
+            }
+            set
+            {
+                this.vetvalorParcela3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=42)]
+        public decimal[] vetCodMensagem
+        {
+            get
+            {
+                return this.vetCodMensagemField;
+            }
+            set
+            {
+                this.vetCodMensagemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=43)]
+        public string[] vetMensagemDua
+        {
+            get
+            {
+                return this.vetMensagemDuaField;
+            }
+            set
+            {
+                this.vetMensagemDuaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=44)]
+        public decimal[] vAnos
+        {
+            get
+            {
+                return this.vAnosField;
+            }
+            set
+            {
+                this.vAnosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public decimal vContAnos
+        {
+            get
+            {
+                return this.vContAnosField;
+            }
+            set
+            {
+                this.vContAnosField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class ConsultaCEP
+    {
+        
+        private string tipo_logradouroField;
+        
+        private string logradouroField;
+        
+        private string bairroField;
+        
+        private string municipioField;
+        
+        private string codigo_municipioField;
+        
+        private string ufField;
+        
+        private erro erroField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string tipo_logradouro
+        {
+            get
+            {
+                return this.tipo_logradouroField;
+            }
+            set
+            {
+                this.tipo_logradouroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string logradouro
+        {
+            get
+            {
+                return this.logradouroField;
+            }
+            set
+            {
+                this.logradouroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string bairro
+        {
+            get
+            {
+                return this.bairroField;
+            }
+            set
+            {
+                this.bairroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string municipio
+        {
+            get
+            {
+                return this.municipioField;
+            }
+            set
+            {
+                this.municipioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string codigo_municipio
+        {
+            get
+            {
+                return this.codigo_municipioField;
+            }
+            set
+            {
+                this.codigo_municipioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string uf
+        {
+            get
+            {
+                return this.ufField;
+            }
+            set
+            {
+                this.ufField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class realizarServicoRenovacaoHabilitacaoResult
     {
         
         private int codigoRetornoField;
         
         private erro erroField;
         
-        private double codSegurancaOutField;
+        private string vNomeField;
         
-        private double renavamField;
+        private string vTipoPessoaField;
         
-        private string placaOutField;
+        private string vCpfField;
         
-        private string nomeProprietarioField;
+        private string vNomePaiField;
         
-        private string documentoCRLVePdfField;
+        private string vNomeMaeField;
+        
+        private string vTipoDocumentoField;
+        
+        private string vNumeroDocumentoField;
+        
+        private string vDigitoNumeroDocumentoField;
+        
+        private string vOrgaoEmissorField;
+        
+        private string vUFemissaoField;
+        
+        private string vDataNascimentoField;
+        
+        private string vLocalidadeNascimentoField;
+        
+        private string vLocalidadeNascimentoDescricaoField;
+        
+        private string vUFnaturalidadeField;
+        
+        private string vUFnaturalidadeDescricaoField;
+        
+        private string vCodigoSexoField;
+        
+        private string vDescricaoSexoField;
+        
+        private string vCodigoEscolaridadeField;
+        
+        private string vDescricaoEscolaridadeField;
+        
+        private string vCodigoNacionalidadeField;
+        
+        private string vDescricaoNacionalidadeField;
+        
+        private string vTipoCondutorCodigoField;
+        
+        private string vTipoCondutorDescricaoField;
+        
+        private string vCategoriaField;
+        
+        private string vTemBiometriaField;
+        
+        private string vFlagSenhaProcessoField;
+        
+        private string vCategoriaRebaixamentoField;
+        
+        private string vPerguntaRebaixamentoField;
+        
+        private string vRegistroField;
+        
+        private string vFormularioRenachField;
+        
+        private string vAtividadeRemuneradaField;
+        
+        private string vDeficienciaFisicaField;
+        
+        private string vDataExameValidoField;
+        
+        private string vProcessoField;
+        
+        private string vTipoProcessoField;
+        
+        private string vRequerField;
+        
+        private string vProvaCursoRenovacaoField;
+        
+        private string vTransfJurisdicaoField;
+        
+        private string vRgDifereBincoField;
+        
+        private string vContProcessosSuspensaoField;
+        
+        private string vCnHcarteiraField;
+        
+        private string vFlagCnhDefinitivaField;
+        
+        private string vNumeroCnhField;
+        
+        private string vDataEmissaoCnhField;
+        
+        private string vUFdominioCnhField;
+        
+        private string vDataprimeiraCnhField;
+        
+        private string vUFprimeiraCnhField;
+        
+        private string vCodigoSegurancaCnhField;
+        
+        private string vDataValidadeCnhField;
+        
+        private string vValidadeCnhAutorizadaField;
+        
+        private string vMensagemProcessoField;
+        
+        private string[] vVetCodigoLocaisProvasExamesField;
+        
+        private string[] vVetDescricaoLocaisProvasExamesField;
+        
+        private string vContadorSetorField;
+        
+        private string[] vVetDescricaoSetorField;
+        
+        private string[] vVetCodigoSetorField;
+        
+        private double vDocArrecadacaoField;
+        
+        private decimal[] vVetTaxasField;
+        
+        private string[] vVetDescricaoDebitosField;
+        
+        private string vDataProcessamentoField;
+        
+        private string vNomeCondutorField;
+        
+        private string[] vValor_AField;
+        
+        private string vValorApagarField;
+        
+        private string vVencimentoField;
+        
+        private string vAgenciaField;
+        
+        private string vTotal_AField;
+        
+        private string vLinhaDigField;
+        
+        private string vLinhaCodBarraField;
+        
+        private string vIdentidadeField;
+        
+        private string vASBACE1Field;
+        
+        private string vFichaCompField;
+        
+        private string[] vVetDescricaoField;
+        
+        private string vRenachField;
+        
+        private string vDataEmissaoField;
+        
+        private string[] vVetArrayMensagemField;
+        
+        private string[] vDescCursoField;
+        
+        private string[] vSituacaoCursoField;
+        
+        private string[] vValidadeCursoField;
+        
+        private string[] vCodigoCursoField;
+        
+        private decimal[] vValidadeCursoAuxiField;
+        
+        private string[] vSituacaoProvaField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=0)]
@@ -709,71 +3724,2255 @@ namespace wsDetranChatBot
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public double codSegurancaOut
+        public string vNome
         {
             get
             {
-                return this.codSegurancaOutField;
+                return this.vNomeField;
             }
             set
             {
-                this.codSegurancaOutField = value;
+                this.vNomeField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public double renavam
+        public string vTipoPessoa
         {
             get
             {
-                return this.renavamField;
+                return this.vTipoPessoaField;
             }
             set
             {
-                this.renavamField = value;
+                this.vTipoPessoaField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string placaOut
+        public string vCpf
         {
             get
             {
-                return this.placaOutField;
+                return this.vCpfField;
             }
             set
             {
-                this.placaOutField = value;
+                this.vCpfField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public string nomeProprietario
+        public string vNomePai
         {
             get
             {
-                return this.nomeProprietarioField;
+                return this.vNomePaiField;
             }
             set
             {
-                this.nomeProprietarioField = value;
+                this.vNomePaiField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public string documentoCRLVePdf
+        public string vNomeMae
         {
             get
             {
-                return this.documentoCRLVePdfField;
+                return this.vNomeMaeField;
             }
             set
             {
-                this.documentoCRLVePdfField = value;
+                this.vNomeMaeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string vTipoDocumento
+        {
+            get
+            {
+                return this.vTipoDocumentoField;
+            }
+            set
+            {
+                this.vTipoDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string vNumeroDocumento
+        {
+            get
+            {
+                return this.vNumeroDocumentoField;
+            }
+            set
+            {
+                this.vNumeroDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string vDigitoNumeroDocumento
+        {
+            get
+            {
+                return this.vDigitoNumeroDocumentoField;
+            }
+            set
+            {
+                this.vDigitoNumeroDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string vOrgaoEmissor
+        {
+            get
+            {
+                return this.vOrgaoEmissorField;
+            }
+            set
+            {
+                this.vOrgaoEmissorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string vUFemissao
+        {
+            get
+            {
+                return this.vUFemissaoField;
+            }
+            set
+            {
+                this.vUFemissaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string vDataNascimento
+        {
+            get
+            {
+                return this.vDataNascimentoField;
+            }
+            set
+            {
+                this.vDataNascimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string vLocalidadeNascimento
+        {
+            get
+            {
+                return this.vLocalidadeNascimentoField;
+            }
+            set
+            {
+                this.vLocalidadeNascimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string vLocalidadeNascimentoDescricao
+        {
+            get
+            {
+                return this.vLocalidadeNascimentoDescricaoField;
+            }
+            set
+            {
+                this.vLocalidadeNascimentoDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string vUFnaturalidade
+        {
+            get
+            {
+                return this.vUFnaturalidadeField;
+            }
+            set
+            {
+                this.vUFnaturalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string vUFnaturalidadeDescricao
+        {
+            get
+            {
+                return this.vUFnaturalidadeDescricaoField;
+            }
+            set
+            {
+                this.vUFnaturalidadeDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string vCodigoSexo
+        {
+            get
+            {
+                return this.vCodigoSexoField;
+            }
+            set
+            {
+                this.vCodigoSexoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string vDescricaoSexo
+        {
+            get
+            {
+                return this.vDescricaoSexoField;
+            }
+            set
+            {
+                this.vDescricaoSexoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string vCodigoEscolaridade
+        {
+            get
+            {
+                return this.vCodigoEscolaridadeField;
+            }
+            set
+            {
+                this.vCodigoEscolaridadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string vDescricaoEscolaridade
+        {
+            get
+            {
+                return this.vDescricaoEscolaridadeField;
+            }
+            set
+            {
+                this.vDescricaoEscolaridadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string vCodigoNacionalidade
+        {
+            get
+            {
+                return this.vCodigoNacionalidadeField;
+            }
+            set
+            {
+                this.vCodigoNacionalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string vDescricaoNacionalidade
+        {
+            get
+            {
+                return this.vDescricaoNacionalidadeField;
+            }
+            set
+            {
+                this.vDescricaoNacionalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string vTipoCondutorCodigo
+        {
+            get
+            {
+                return this.vTipoCondutorCodigoField;
+            }
+            set
+            {
+                this.vTipoCondutorCodigoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string vTipoCondutorDescricao
+        {
+            get
+            {
+                return this.vTipoCondutorDescricaoField;
+            }
+            set
+            {
+                this.vTipoCondutorDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string vCategoria
+        {
+            get
+            {
+                return this.vCategoriaField;
+            }
+            set
+            {
+                this.vCategoriaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string vTemBiometria
+        {
+            get
+            {
+                return this.vTemBiometriaField;
+            }
+            set
+            {
+                this.vTemBiometriaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string vFlagSenhaProcesso
+        {
+            get
+            {
+                return this.vFlagSenhaProcessoField;
+            }
+            set
+            {
+                this.vFlagSenhaProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string vCategoriaRebaixamento
+        {
+            get
+            {
+                return this.vCategoriaRebaixamentoField;
+            }
+            set
+            {
+                this.vCategoriaRebaixamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public string vPerguntaRebaixamento
+        {
+            get
+            {
+                return this.vPerguntaRebaixamentoField;
+            }
+            set
+            {
+                this.vPerguntaRebaixamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public string vRegistro
+        {
+            get
+            {
+                return this.vRegistroField;
+            }
+            set
+            {
+                this.vRegistroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public string vFormularioRenach
+        {
+            get
+            {
+                return this.vFormularioRenachField;
+            }
+            set
+            {
+                this.vFormularioRenachField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public string vAtividadeRemunerada
+        {
+            get
+            {
+                return this.vAtividadeRemuneradaField;
+            }
+            set
+            {
+                this.vAtividadeRemuneradaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public string vDeficienciaFisica
+        {
+            get
+            {
+                return this.vDeficienciaFisicaField;
+            }
+            set
+            {
+                this.vDeficienciaFisicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string vDataExameValido
+        {
+            get
+            {
+                return this.vDataExameValidoField;
+            }
+            set
+            {
+                this.vDataExameValidoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string vProcesso
+        {
+            get
+            {
+                return this.vProcessoField;
+            }
+            set
+            {
+                this.vProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string vTipoProcesso
+        {
+            get
+            {
+                return this.vTipoProcessoField;
+            }
+            set
+            {
+                this.vTipoProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string vRequer
+        {
+            get
+            {
+                return this.vRequerField;
+            }
+            set
+            {
+                this.vRequerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public string vProvaCursoRenovacao
+        {
+            get
+            {
+                return this.vProvaCursoRenovacaoField;
+            }
+            set
+            {
+                this.vProvaCursoRenovacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public string vTransfJurisdicao
+        {
+            get
+            {
+                return this.vTransfJurisdicaoField;
+            }
+            set
+            {
+                this.vTransfJurisdicaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public string vRgDifereBinco
+        {
+            get
+            {
+                return this.vRgDifereBincoField;
+            }
+            set
+            {
+                this.vRgDifereBincoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public string vContProcessosSuspensao
+        {
+            get
+            {
+                return this.vContProcessosSuspensaoField;
+            }
+            set
+            {
+                this.vContProcessosSuspensaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public string vCnHcarteira
+        {
+            get
+            {
+                return this.vCnHcarteiraField;
+            }
+            set
+            {
+                this.vCnHcarteiraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public string vFlagCnhDefinitiva
+        {
+            get
+            {
+                return this.vFlagCnhDefinitivaField;
+            }
+            set
+            {
+                this.vFlagCnhDefinitivaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
+        public string vNumeroCnh
+        {
+            get
+            {
+                return this.vNumeroCnhField;
+            }
+            set
+            {
+                this.vNumeroCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public string vDataEmissaoCnh
+        {
+            get
+            {
+                return this.vDataEmissaoCnhField;
+            }
+            set
+            {
+                this.vDataEmissaoCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public string vUFdominioCnh
+        {
+            get
+            {
+                return this.vUFdominioCnhField;
+            }
+            set
+            {
+                this.vUFdominioCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=47)]
+        public string vDataprimeiraCnh
+        {
+            get
+            {
+                return this.vDataprimeiraCnhField;
+            }
+            set
+            {
+                this.vDataprimeiraCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public string vUFprimeiraCnh
+        {
+            get
+            {
+                return this.vUFprimeiraCnhField;
+            }
+            set
+            {
+                this.vUFprimeiraCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        public string vCodigoSegurancaCnh
+        {
+            get
+            {
+                return this.vCodigoSegurancaCnhField;
+            }
+            set
+            {
+                this.vCodigoSegurancaCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public string vDataValidadeCnh
+        {
+            get
+            {
+                return this.vDataValidadeCnhField;
+            }
+            set
+            {
+                this.vDataValidadeCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
+        public string vValidadeCnhAutorizada
+        {
+            get
+            {
+                return this.vValidadeCnhAutorizadaField;
+            }
+            set
+            {
+                this.vValidadeCnhAutorizadaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public string vMensagemProcesso
+        {
+            get
+            {
+                return this.vMensagemProcessoField;
+            }
+            set
+            {
+                this.vMensagemProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=53)]
+        public string[] vVetCodigoLocaisProvasExames
+        {
+            get
+            {
+                return this.vVetCodigoLocaisProvasExamesField;
+            }
+            set
+            {
+                this.vVetCodigoLocaisProvasExamesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=54)]
+        public string[] vVetDescricaoLocaisProvasExames
+        {
+            get
+            {
+                return this.vVetDescricaoLocaisProvasExamesField;
+            }
+            set
+            {
+                this.vVetDescricaoLocaisProvasExamesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public string vContadorSetor
+        {
+            get
+            {
+                return this.vContadorSetorField;
+            }
+            set
+            {
+                this.vContadorSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=56)]
+        public string[] vVetDescricaoSetor
+        {
+            get
+            {
+                return this.vVetDescricaoSetorField;
+            }
+            set
+            {
+                this.vVetDescricaoSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=57)]
+        public string[] vVetCodigoSetor
+        {
+            get
+            {
+                return this.vVetCodigoSetorField;
+            }
+            set
+            {
+                this.vVetCodigoSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        public double vDocArrecadacao
+        {
+            get
+            {
+                return this.vDocArrecadacaoField;
+            }
+            set
+            {
+                this.vDocArrecadacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=59)]
+        public decimal[] vVetTaxas
+        {
+            get
+            {
+                return this.vVetTaxasField;
+            }
+            set
+            {
+                this.vVetTaxasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=60)]
+        public string[] vVetDescricaoDebitos
+        {
+            get
+            {
+                return this.vVetDescricaoDebitosField;
+            }
+            set
+            {
+                this.vVetDescricaoDebitosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=61)]
+        public string vDataProcessamento
+        {
+            get
+            {
+                return this.vDataProcessamentoField;
+            }
+            set
+            {
+                this.vDataProcessamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=62)]
+        public string vNomeCondutor
+        {
+            get
+            {
+                return this.vNomeCondutorField;
+            }
+            set
+            {
+                this.vNomeCondutorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=63)]
+        public string[] vValor_A
+        {
+            get
+            {
+                return this.vValor_AField;
+            }
+            set
+            {
+                this.vValor_AField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=64)]
+        public string vValorApagar
+        {
+            get
+            {
+                return this.vValorApagarField;
+            }
+            set
+            {
+                this.vValorApagarField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=65)]
+        public string vVencimento
+        {
+            get
+            {
+                return this.vVencimentoField;
+            }
+            set
+            {
+                this.vVencimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=66)]
+        public string vAgencia
+        {
+            get
+            {
+                return this.vAgenciaField;
+            }
+            set
+            {
+                this.vAgenciaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=67)]
+        public string vTotal_A
+        {
+            get
+            {
+                return this.vTotal_AField;
+            }
+            set
+            {
+                this.vTotal_AField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=68)]
+        public string vLinhaDig
+        {
+            get
+            {
+                return this.vLinhaDigField;
+            }
+            set
+            {
+                this.vLinhaDigField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=69)]
+        public string vLinhaCodBarra
+        {
+            get
+            {
+                return this.vLinhaCodBarraField;
+            }
+            set
+            {
+                this.vLinhaCodBarraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=70)]
+        public string vIdentidade
+        {
+            get
+            {
+                return this.vIdentidadeField;
+            }
+            set
+            {
+                this.vIdentidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=71)]
+        public string vASBACE1
+        {
+            get
+            {
+                return this.vASBACE1Field;
+            }
+            set
+            {
+                this.vASBACE1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=72)]
+        public string vFichaComp
+        {
+            get
+            {
+                return this.vFichaCompField;
+            }
+            set
+            {
+                this.vFichaCompField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=73)]
+        public string[] vVetDescricao
+        {
+            get
+            {
+                return this.vVetDescricaoField;
+            }
+            set
+            {
+                this.vVetDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=74)]
+        public string vRenach
+        {
+            get
+            {
+                return this.vRenachField;
+            }
+            set
+            {
+                this.vRenachField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=75)]
+        public string vDataEmissao
+        {
+            get
+            {
+                return this.vDataEmissaoField;
+            }
+            set
+            {
+                this.vDataEmissaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=76)]
+        public string[] vVetArrayMensagem
+        {
+            get
+            {
+                return this.vVetArrayMensagemField;
+            }
+            set
+            {
+                this.vVetArrayMensagemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=77)]
+        public string[] vDescCurso
+        {
+            get
+            {
+                return this.vDescCursoField;
+            }
+            set
+            {
+                this.vDescCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=78)]
+        public string[] vSituacaoCurso
+        {
+            get
+            {
+                return this.vSituacaoCursoField;
+            }
+            set
+            {
+                this.vSituacaoCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=79)]
+        public string[] vValidadeCurso
+        {
+            get
+            {
+                return this.vValidadeCursoField;
+            }
+            set
+            {
+                this.vValidadeCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=80)]
+        public string[] vCodigoCurso
+        {
+            get
+            {
+                return this.vCodigoCursoField;
+            }
+            set
+            {
+                this.vCodigoCursoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=81)]
+        public decimal[] vValidadeCursoAuxi
+        {
+            get
+            {
+                return this.vValidadeCursoAuxiField;
+            }
+            set
+            {
+                this.vValidadeCursoAuxiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=82)]
+        public string[] vSituacaoProva
+        {
+            get
+            {
+                return this.vSituacaoProvaField;
+            }
+            set
+            {
+                this.vSituacaoProvaField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class validarRenovacaoHabilitacaoResult
+    {
+        
+        private int codigoRetornoField;
+        
+        private erro erroField;
+        
+        private string vNomeField;
+        
+        private string vTipoPessoaField;
+        
+        private string vCpfField;
+        
+        private string vNomePaiField;
+        
+        private string vNomeMaeField;
+        
+        private string vTipoDocumentoField;
+        
+        private string vNumeroDocumentoField;
+        
+        private string vDigitoNumeroDocumentoField;
+        
+        private string vOrgaoEmissorField;
+        
+        private string vUFemissaoField;
+        
+        private string vDataNascimentoField;
+        
+        private string vLocalidadeNascimentoField;
+        
+        private string vLocalidadeNascimentoDescricaoField;
+        
+        private string vUFnaturalidadeField;
+        
+        private string vUFnaturalidadeDescricaoField;
+        
+        private string vCodigoSexoField;
+        
+        private string vDescricaoSexoField;
+        
+        private string vCodigoEscolaridadeField;
+        
+        private string vDescricaoEscolaridadeField;
+        
+        private string vCodigoNacionalidadeField;
+        
+        private string vDescricaoNacionalidadeField;
+        
+        private string vTipoCondutorCodigoField;
+        
+        private string vTipoCondutorDescricaoField;
+        
+        private string vCategoriaField;
+        
+        private string vTemBiometriaField;
+        
+        private string vFlagSenhaProcessoField;
+        
+        private string vCategoriaRebaixamentoField;
+        
+        private string vPerguntaRebaixamentoField;
+        
+        private string vRegistroField;
+        
+        private string vFormularioRenachField;
+        
+        private string vAtividadeRemuneradaField;
+        
+        private string vDeficienciaFisicaField;
+        
+        private string vDataExameValidoField;
+        
+        private string vProcessoField;
+        
+        private string vTipoProcessoField;
+        
+        private string vRequerField;
+        
+        private string vProvaCursoRenovacaoField;
+        
+        private string vTransfJurisdicaoField;
+        
+        private string vRgDifereBincoField;
+        
+        private string vContProcessosSuspensaoField;
+        
+        private string vCnHcarteiraField;
+        
+        private string vFlagCnhDefinitivaField;
+        
+        private string vNumeroCnhField;
+        
+        private string vDataEmissaoCnhField;
+        
+        private string vUFdominioCnhField;
+        
+        private string vDataprimeiraCnhField;
+        
+        private string vUFprimeiraCnhField;
+        
+        private string vCodigoSegurancaCnhField;
+        
+        private string vDataValidadeCnhField;
+        
+        private string vValidadeCnhAutorizadaField;
+        
+        private string vMensagemProcessoField;
+        
+        private string[] vVetCodigoLocaisProvasExamesField;
+        
+        private string[] vVetDescricaoLocaisProvasExamesField;
+        
+        private string vContadorSetorField;
+        
+        private string[] vVetDescricaoSetorField;
+        
+        private string[] vVetCodigoSetorField;
+        
+        private string msgCursoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int codigoRetorno
+        {
+            get
+            {
+                return this.codigoRetornoField;
+            }
+            set
+            {
+                this.codigoRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string vNome
+        {
+            get
+            {
+                return this.vNomeField;
+            }
+            set
+            {
+                this.vNomeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string vTipoPessoa
+        {
+            get
+            {
+                return this.vTipoPessoaField;
+            }
+            set
+            {
+                this.vTipoPessoaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string vCpf
+        {
+            get
+            {
+                return this.vCpfField;
+            }
+            set
+            {
+                this.vCpfField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string vNomePai
+        {
+            get
+            {
+                return this.vNomePaiField;
+            }
+            set
+            {
+                this.vNomePaiField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string vNomeMae
+        {
+            get
+            {
+                return this.vNomeMaeField;
+            }
+            set
+            {
+                this.vNomeMaeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string vTipoDocumento
+        {
+            get
+            {
+                return this.vTipoDocumentoField;
+            }
+            set
+            {
+                this.vTipoDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string vNumeroDocumento
+        {
+            get
+            {
+                return this.vNumeroDocumentoField;
+            }
+            set
+            {
+                this.vNumeroDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string vDigitoNumeroDocumento
+        {
+            get
+            {
+                return this.vDigitoNumeroDocumentoField;
+            }
+            set
+            {
+                this.vDigitoNumeroDocumentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string vOrgaoEmissor
+        {
+            get
+            {
+                return this.vOrgaoEmissorField;
+            }
+            set
+            {
+                this.vOrgaoEmissorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string vUFemissao
+        {
+            get
+            {
+                return this.vUFemissaoField;
+            }
+            set
+            {
+                this.vUFemissaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=12)]
+        public string vDataNascimento
+        {
+            get
+            {
+                return this.vDataNascimentoField;
+            }
+            set
+            {
+                this.vDataNascimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public string vLocalidadeNascimento
+        {
+            get
+            {
+                return this.vLocalidadeNascimentoField;
+            }
+            set
+            {
+                this.vLocalidadeNascimentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public string vLocalidadeNascimentoDescricao
+        {
+            get
+            {
+                return this.vLocalidadeNascimentoDescricaoField;
+            }
+            set
+            {
+                this.vLocalidadeNascimentoDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public string vUFnaturalidade
+        {
+            get
+            {
+                return this.vUFnaturalidadeField;
+            }
+            set
+            {
+                this.vUFnaturalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=16)]
+        public string vUFnaturalidadeDescricao
+        {
+            get
+            {
+                return this.vUFnaturalidadeDescricaoField;
+            }
+            set
+            {
+                this.vUFnaturalidadeDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=17)]
+        public string vCodigoSexo
+        {
+            get
+            {
+                return this.vCodigoSexoField;
+            }
+            set
+            {
+                this.vCodigoSexoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=18)]
+        public string vDescricaoSexo
+        {
+            get
+            {
+                return this.vDescricaoSexoField;
+            }
+            set
+            {
+                this.vDescricaoSexoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=19)]
+        public string vCodigoEscolaridade
+        {
+            get
+            {
+                return this.vCodigoEscolaridadeField;
+            }
+            set
+            {
+                this.vCodigoEscolaridadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=20)]
+        public string vDescricaoEscolaridade
+        {
+            get
+            {
+                return this.vDescricaoEscolaridadeField;
+            }
+            set
+            {
+                this.vDescricaoEscolaridadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public string vCodigoNacionalidade
+        {
+            get
+            {
+                return this.vCodigoNacionalidadeField;
+            }
+            set
+            {
+                this.vCodigoNacionalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public string vDescricaoNacionalidade
+        {
+            get
+            {
+                return this.vDescricaoNacionalidadeField;
+            }
+            set
+            {
+                this.vDescricaoNacionalidadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public string vTipoCondutorCodigo
+        {
+            get
+            {
+                return this.vTipoCondutorCodigoField;
+            }
+            set
+            {
+                this.vTipoCondutorCodigoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public string vTipoCondutorDescricao
+        {
+            get
+            {
+                return this.vTipoCondutorDescricaoField;
+            }
+            set
+            {
+                this.vTipoCondutorDescricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public string vCategoria
+        {
+            get
+            {
+                return this.vCategoriaField;
+            }
+            set
+            {
+                this.vCategoriaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=26)]
+        public string vTemBiometria
+        {
+            get
+            {
+                return this.vTemBiometriaField;
+            }
+            set
+            {
+                this.vTemBiometriaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=27)]
+        public string vFlagSenhaProcesso
+        {
+            get
+            {
+                return this.vFlagSenhaProcessoField;
+            }
+            set
+            {
+                this.vFlagSenhaProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=28)]
+        public string vCategoriaRebaixamento
+        {
+            get
+            {
+                return this.vCategoriaRebaixamentoField;
+            }
+            set
+            {
+                this.vCategoriaRebaixamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=29)]
+        public string vPerguntaRebaixamento
+        {
+            get
+            {
+                return this.vPerguntaRebaixamentoField;
+            }
+            set
+            {
+                this.vPerguntaRebaixamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=30)]
+        public string vRegistro
+        {
+            get
+            {
+                return this.vRegistroField;
+            }
+            set
+            {
+                this.vRegistroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=31)]
+        public string vFormularioRenach
+        {
+            get
+            {
+                return this.vFormularioRenachField;
+            }
+            set
+            {
+                this.vFormularioRenachField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=32)]
+        public string vAtividadeRemunerada
+        {
+            get
+            {
+                return this.vAtividadeRemuneradaField;
+            }
+            set
+            {
+                this.vAtividadeRemuneradaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=33)]
+        public string vDeficienciaFisica
+        {
+            get
+            {
+                return this.vDeficienciaFisicaField;
+            }
+            set
+            {
+                this.vDeficienciaFisicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=34)]
+        public string vDataExameValido
+        {
+            get
+            {
+                return this.vDataExameValidoField;
+            }
+            set
+            {
+                this.vDataExameValidoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=35)]
+        public string vProcesso
+        {
+            get
+            {
+                return this.vProcessoField;
+            }
+            set
+            {
+                this.vProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=36)]
+        public string vTipoProcesso
+        {
+            get
+            {
+                return this.vTipoProcessoField;
+            }
+            set
+            {
+                this.vTipoProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=37)]
+        public string vRequer
+        {
+            get
+            {
+                return this.vRequerField;
+            }
+            set
+            {
+                this.vRequerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=38)]
+        public string vProvaCursoRenovacao
+        {
+            get
+            {
+                return this.vProvaCursoRenovacaoField;
+            }
+            set
+            {
+                this.vProvaCursoRenovacaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=39)]
+        public string vTransfJurisdicao
+        {
+            get
+            {
+                return this.vTransfJurisdicaoField;
+            }
+            set
+            {
+                this.vTransfJurisdicaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=40)]
+        public string vRgDifereBinco
+        {
+            get
+            {
+                return this.vRgDifereBincoField;
+            }
+            set
+            {
+                this.vRgDifereBincoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=41)]
+        public string vContProcessosSuspensao
+        {
+            get
+            {
+                return this.vContProcessosSuspensaoField;
+            }
+            set
+            {
+                this.vContProcessosSuspensaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=42)]
+        public string vCnHcarteira
+        {
+            get
+            {
+                return this.vCnHcarteiraField;
+            }
+            set
+            {
+                this.vCnHcarteiraField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=43)]
+        public string vFlagCnhDefinitiva
+        {
+            get
+            {
+                return this.vFlagCnhDefinitivaField;
+            }
+            set
+            {
+                this.vFlagCnhDefinitivaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=44)]
+        public string vNumeroCnh
+        {
+            get
+            {
+                return this.vNumeroCnhField;
+            }
+            set
+            {
+                this.vNumeroCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=45)]
+        public string vDataEmissaoCnh
+        {
+            get
+            {
+                return this.vDataEmissaoCnhField;
+            }
+            set
+            {
+                this.vDataEmissaoCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=46)]
+        public string vUFdominioCnh
+        {
+            get
+            {
+                return this.vUFdominioCnhField;
+            }
+            set
+            {
+                this.vUFdominioCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=47)]
+        public string vDataprimeiraCnh
+        {
+            get
+            {
+                return this.vDataprimeiraCnhField;
+            }
+            set
+            {
+                this.vDataprimeiraCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=48)]
+        public string vUFprimeiraCnh
+        {
+            get
+            {
+                return this.vUFprimeiraCnhField;
+            }
+            set
+            {
+                this.vUFprimeiraCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=49)]
+        public string vCodigoSegurancaCnh
+        {
+            get
+            {
+                return this.vCodigoSegurancaCnhField;
+            }
+            set
+            {
+                this.vCodigoSegurancaCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=50)]
+        public string vDataValidadeCnh
+        {
+            get
+            {
+                return this.vDataValidadeCnhField;
+            }
+            set
+            {
+                this.vDataValidadeCnhField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=51)]
+        public string vValidadeCnhAutorizada
+        {
+            get
+            {
+                return this.vValidadeCnhAutorizadaField;
+            }
+            set
+            {
+                this.vValidadeCnhAutorizadaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=52)]
+        public string vMensagemProcesso
+        {
+            get
+            {
+                return this.vMensagemProcessoField;
+            }
+            set
+            {
+                this.vMensagemProcessoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=53)]
+        public string[] vVetCodigoLocaisProvasExames
+        {
+            get
+            {
+                return this.vVetCodigoLocaisProvasExamesField;
+            }
+            set
+            {
+                this.vVetCodigoLocaisProvasExamesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=54)]
+        public string[] vVetDescricaoLocaisProvasExames
+        {
+            get
+            {
+                return this.vVetDescricaoLocaisProvasExamesField;
+            }
+            set
+            {
+                this.vVetDescricaoLocaisProvasExamesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=55)]
+        public string vContadorSetor
+        {
+            get
+            {
+                return this.vContadorSetorField;
+            }
+            set
+            {
+                this.vContadorSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=56)]
+        public string[] vVetDescricaoSetor
+        {
+            get
+            {
+                return this.vVetDescricaoSetorField;
+            }
+            set
+            {
+                this.vVetDescricaoSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=57)]
+        public string[] vVetCodigoSetor
+        {
+            get
+            {
+                return this.vVetCodigoSetorField;
+            }
+            set
+            {
+                this.vVetCodigoSetorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=58)]
+        public string msgCurso
+        {
+            get
+            {
+                return this.msgCursoField;
+            }
+            set
+            {
+                this.msgCursoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class CalendarioLicenciamentoResult
+    {
+        
+        private int codigoRetornoField;
+        
+        private erro erroField;
+        
+        private int anoLicenciamentoReqField;
+        
+        private string terminacaoPlacasField;
+        
+        private string dataPrimeiraParcField;
+        
+        private string dataSegundaParcField;
+        
+        private string dataTerceiraParcCotaUnicaField;
+        
+        private string dataPagTotSemDescontoField;
+        
+        private string dataDescontoField;
+        
+        private string dataFiscalizacaoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int codigoRetorno
+        {
+            get
+            {
+                return this.codigoRetornoField;
+            }
+            set
+            {
+                this.codigoRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int AnoLicenciamentoReq
+        {
+            get
+            {
+                return this.anoLicenciamentoReqField;
+            }
+            set
+            {
+                this.anoLicenciamentoReqField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string TerminacaoPlacas
+        {
+            get
+            {
+                return this.terminacaoPlacasField;
+            }
+            set
+            {
+                this.terminacaoPlacasField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string DataPrimeiraParc
+        {
+            get
+            {
+                return this.dataPrimeiraParcField;
+            }
+            set
+            {
+                this.dataPrimeiraParcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string DataSegundaParc
+        {
+            get
+            {
+                return this.dataSegundaParcField;
+            }
+            set
+            {
+                this.dataSegundaParcField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string DataTerceiraParcCotaUnica
+        {
+            get
+            {
+                return this.dataTerceiraParcCotaUnicaField;
+            }
+            set
+            {
+                this.dataTerceiraParcCotaUnicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string DataPagTotSemDesconto
+        {
+            get
+            {
+                return this.dataPagTotSemDescontoField;
+            }
+            set
+            {
+                this.dataPagTotSemDescontoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string DataDesconto
+        {
+            get
+            {
+                return this.dataDescontoField;
+            }
+            set
+            {
+                this.dataDescontoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string DataFiscalizacao
+        {
+            get
+            {
+                return this.dataFiscalizacaoField;
+            }
+            set
+            {
+                this.dataFiscalizacaoField = value;
             }
         }
     }
@@ -1714,11 +6913,699 @@ namespace wsDetranChatBot
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class validarServicoLicenciamentoResult
+    {
+        
+        private int codigoRetornoField;
+        
+        private erro erroField;
+        
+        private double codSegurancaOutField;
+        
+        private double renavamOutField;
+        
+        private string placaField;
+        
+        private string marcaModeloField;
+        
+        private string nomeProprietarioField;
+        
+        private string temRNTRCField;
+        
+        private string tipoAutorizacaoRNTRCField;
+        
+        private string nroAutorizacaoRNTRCField;
+        
+        private string temIsencaoIPVAField;
+        
+        private string restricaoField;
+        
+        private double[] anoLicenciamentoField;
+        
+        private double contadorAnoLicenciamentoField;
+        
+        private recallPendente recallPendenteField;
+        
+        private double contadorRegistroField;
+        
+        private string[] vetDescDebitosField;
+        
+        private double[] vetValorCotaunicaField;
+        
+        private double[] vetValorParcela1Field;
+        
+        private double[] vetValorParcela2Field;
+        
+        private double[] vetvalorParcela3Field;
+        
+        private double totalParcela1Field;
+        
+        private double totalParcela2Field;
+        
+        private double totalParcela3Field;
+        
+        private double totalCotaUnicaField;
+        
+        private double indiceMensagemField;
+        
+        private double[] vetCodMensagemField;
+        
+        private string[] vetMensagemDuaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int codigoRetorno
+        {
+            get
+            {
+                return this.codigoRetornoField;
+            }
+            set
+            {
+                this.codigoRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double codSegurancaOut
+        {
+            get
+            {
+                return this.codSegurancaOutField;
+            }
+            set
+            {
+                this.codSegurancaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public double renavamOut
+        {
+            get
+            {
+                return this.renavamOutField;
+            }
+            set
+            {
+                this.renavamOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string placa
+        {
+            get
+            {
+                return this.placaField;
+            }
+            set
+            {
+                this.placaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string marcaModelo
+        {
+            get
+            {
+                return this.marcaModeloField;
+            }
+            set
+            {
+                this.marcaModeloField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string nomeProprietario
+        {
+            get
+            {
+                return this.nomeProprietarioField;
+            }
+            set
+            {
+                this.nomeProprietarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public string temRNTRC
+        {
+            get
+            {
+                return this.temRNTRCField;
+            }
+            set
+            {
+                this.temRNTRCField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public string tipoAutorizacaoRNTRC
+        {
+            get
+            {
+                return this.tipoAutorizacaoRNTRCField;
+            }
+            set
+            {
+                this.tipoAutorizacaoRNTRCField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public string nroAutorizacaoRNTRC
+        {
+            get
+            {
+                return this.nroAutorizacaoRNTRCField;
+            }
+            set
+            {
+                this.nroAutorizacaoRNTRCField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public string temIsencaoIPVA
+        {
+            get
+            {
+                return this.temIsencaoIPVAField;
+            }
+            set
+            {
+                this.temIsencaoIPVAField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=11)]
+        public string restricao
+        {
+            get
+            {
+                return this.restricaoField;
+            }
+            set
+            {
+                this.restricaoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=12)]
+        public double[] anoLicenciamento
+        {
+            get
+            {
+                return this.anoLicenciamentoField;
+            }
+            set
+            {
+                this.anoLicenciamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=13)]
+        public double contadorAnoLicenciamento
+        {
+            get
+            {
+                return this.contadorAnoLicenciamentoField;
+            }
+            set
+            {
+                this.contadorAnoLicenciamentoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=14)]
+        public recallPendente recallPendente
+        {
+            get
+            {
+                return this.recallPendenteField;
+            }
+            set
+            {
+                this.recallPendenteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=15)]
+        public double contadorRegistro
+        {
+            get
+            {
+                return this.contadorRegistroField;
+            }
+            set
+            {
+                this.contadorRegistroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=16)]
+        public string[] vetDescDebitos
+        {
+            get
+            {
+                return this.vetDescDebitosField;
+            }
+            set
+            {
+                this.vetDescDebitosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=17)]
+        public double[] vetValorCotaunica
+        {
+            get
+            {
+                return this.vetValorCotaunicaField;
+            }
+            set
+            {
+                this.vetValorCotaunicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=18)]
+        public double[] vetValorParcela1
+        {
+            get
+            {
+                return this.vetValorParcela1Field;
+            }
+            set
+            {
+                this.vetValorParcela1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=19)]
+        public double[] vetValorParcela2
+        {
+            get
+            {
+                return this.vetValorParcela2Field;
+            }
+            set
+            {
+                this.vetValorParcela2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=20)]
+        public double[] vetvalorParcela3
+        {
+            get
+            {
+                return this.vetvalorParcela3Field;
+            }
+            set
+            {
+                this.vetvalorParcela3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=21)]
+        public double totalParcela1
+        {
+            get
+            {
+                return this.totalParcela1Field;
+            }
+            set
+            {
+                this.totalParcela1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=22)]
+        public double totalParcela2
+        {
+            get
+            {
+                return this.totalParcela2Field;
+            }
+            set
+            {
+                this.totalParcela2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=23)]
+        public double totalParcela3
+        {
+            get
+            {
+                return this.totalParcela3Field;
+            }
+            set
+            {
+                this.totalParcela3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=24)]
+        public double totalCotaUnica
+        {
+            get
+            {
+                return this.totalCotaUnicaField;
+            }
+            set
+            {
+                this.totalCotaUnicaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=25)]
+        public double indiceMensagem
+        {
+            get
+            {
+                return this.indiceMensagemField;
+            }
+            set
+            {
+                this.indiceMensagemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=26)]
+        public double[] vetCodMensagem
+        {
+            get
+            {
+                return this.vetCodMensagemField;
+            }
+            set
+            {
+                this.vetCodMensagemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=27)]
+        public string[] vetMensagemDua
+        {
+            get
+            {
+                return this.vetMensagemDuaField;
+            }
+            set
+            {
+                this.vetMensagemDuaField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+    public partial class obterEmissaoCrlvResult
+    {
+        
+        private int codigoRetornoField;
+        
+        private erro erroField;
+        
+        private double codSegurancaOutField;
+        
+        private double renavamField;
+        
+        private string placaOutField;
+        
+        private string nomeProprietarioField;
+        
+        private string documentoCRLVePdfField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int codigoRetorno
+        {
+            get
+            {
+                return this.codigoRetornoField;
+            }
+            set
+            {
+                this.codigoRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public erro erro
+        {
+            get
+            {
+                return this.erroField;
+            }
+            set
+            {
+                this.erroField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public double codSegurancaOut
+        {
+            get
+            {
+                return this.codSegurancaOutField;
+            }
+            set
+            {
+                this.codSegurancaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public double renavam
+        {
+            get
+            {
+                return this.renavamField;
+            }
+            set
+            {
+                this.renavamField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string placaOut
+        {
+            get
+            {
+                return this.placaOutField;
+            }
+            set
+            {
+                this.placaOutField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string nomeProprietario
+        {
+            get
+            {
+                return this.nomeProprietarioField;
+            }
+            set
+            {
+                this.nomeProprietarioField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string documentoCRLVePdf
+        {
+            get
+            {
+                return this.documentoCRLVePdfField;
+            }
+            set
+            {
+                this.documentoCRLVePdfField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmissaoCrlv", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class obterEmissaoCrlvRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string tipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public string placa;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
+        public double codSeguranca;
+        
+        public obterEmissaoCrlvRequest()
+        {
+        }
+        
+        public obterEmissaoCrlvRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, string placa, double codSeguranca)
+        {
+            this.autenticacao = autenticacao;
+            this.tipoPlataforma = tipoPlataforma;
+            this.placa = placa;
+            this.codSeguranca = codSeguranca;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmissaoCrlvResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class obterEmissaoCrlvResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.obterEmissaoCrlvResult obterEmissaoCrlvResult;
+        
+        public obterEmissaoCrlvResponse()
+        {
+        }
+        
+        public obterEmissaoCrlvResponse(wsDetranChatBot.obterEmissaoCrlvResult obterEmissaoCrlvResult)
+        {
+            this.obterEmissaoCrlvResult = obterEmissaoCrlvResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarServicoLicenciamento", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarServicoLicenciamentoRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string tipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public double renavam;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
+        public double codSeguranca;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=3)]
+        public string tipoDocumentoIn;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=4)]
+        public double anoLicenciamentoIn;
+        
+        public validarServicoLicenciamentoRequest()
+        {
+        }
+        
+        public validarServicoLicenciamentoRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double renavam, double codSeguranca, string tipoDocumentoIn, double anoLicenciamentoIn)
+        {
+            this.autenticacao = autenticacao;
+            this.tipoPlataforma = tipoPlataforma;
+            this.renavam = renavam;
+            this.codSeguranca = codSeguranca;
+            this.tipoDocumentoIn = tipoDocumentoIn;
+            this.anoLicenciamentoIn = anoLicenciamentoIn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarServicoLicenciamentoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarServicoLicenciamentoResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.validarServicoLicenciamentoResult validarServicoLicenciamentoResult;
+        
+        public validarServicoLicenciamentoResponse()
+        {
+        }
+        
+        public validarServicoLicenciamentoResponse(wsDetranChatBot.validarServicoLicenciamentoResult validarServicoLicenciamentoResult)
+        {
+            this.validarServicoLicenciamentoResult = validarServicoLicenciamentoResult;
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="efetuarServicoLicenciamento", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class efetuarServicoLicenciamentoRequest
+    internal partial class efetuarServicoLicenciamentoRequest
     {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
@@ -1778,7 +7665,7 @@ namespace wsDetranChatBot
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="efetuarServicoLicenciamentoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class efetuarServicoLicenciamentoResponse
+    internal partial class efetuarServicoLicenciamentoResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
@@ -1797,8 +7684,8 @@ namespace wsDetranChatBot
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmissaoCrlv", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class obterEmissaoCrlvRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obterCalendarioLicenciamento", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class obterCalendarioLicenciamentoRequest
     {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
@@ -1808,112 +7695,507 @@ namespace wsDetranChatBot
         public string tipoPlataforma;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
-        public string placa;
+        public int anoLicenciamento;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
-        public double codSeguranca;
+        public int finalPlaca;
         
-        public obterEmissaoCrlvRequest()
+        public obterCalendarioLicenciamentoRequest()
         {
         }
         
-        public obterEmissaoCrlvRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, string placa, double codSeguranca)
+        public obterCalendarioLicenciamentoRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, int anoLicenciamento, int finalPlaca)
         {
             this.autenticacao = autenticacao;
             this.tipoPlataforma = tipoPlataforma;
-            this.placa = placa;
-            this.codSeguranca = codSeguranca;
+            this.anoLicenciamento = anoLicenciamento;
+            this.finalPlaca = finalPlaca;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmissaoCrlvResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class obterEmissaoCrlvResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obterCalendarioLicenciamentoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class obterCalendarioLicenciamentoResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
-        public wsDetranChatBot.obterEmissaoCrlvResult obterEmissaoCrlvResult;
+        public wsDetranChatBot.CalendarioLicenciamentoResult obterCalendarioLicenciamentoResult;
         
-        public obterEmissaoCrlvResponse()
+        public obterCalendarioLicenciamentoResponse()
         {
         }
         
-        public obterEmissaoCrlvResponse(wsDetranChatBot.obterEmissaoCrlvResult obterEmissaoCrlvResult)
+        public obterCalendarioLicenciamentoResponse(wsDetranChatBot.CalendarioLicenciamentoResult obterCalendarioLicenciamentoResult)
         {
-            this.obterEmissaoCrlvResult = obterEmissaoCrlvResult;
+            this.obterCalendarioLicenciamentoResult = obterCalendarioLicenciamentoResult;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarServicoLicenciamento", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class validarServicoLicenciamentoRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarRenovacaoHabilitacao", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarRenovacaoHabilitacaoRequest
     {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
         public wsDetranChatBot.autenticacao autenticacao;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
-        public string tipoPlataforma;
+        public string vTipoPlataforma;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
-        public double renavam;
+        public string vCpf;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
-        public double codSeguranca;
+        public string vNumDocumento;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=3)]
-        public string tipoDocumentoIn;
+        public string vDigito;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=4)]
-        public double anoLicenciamentoIn;
+        public string vOrgaoEmissor;
         
-        public validarServicoLicenciamentoRequest()
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=5)]
+        public string vUfEmissao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=6)]
+        public string vTipoDocumentoArrecadacao;
+        
+        public validarRenovacaoHabilitacaoRequest()
         {
         }
         
-        public validarServicoLicenciamentoRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double renavam, double codSeguranca, string tipoDocumentoIn, double anoLicenciamentoIn)
+        public validarRenovacaoHabilitacaoRequest(wsDetranChatBot.autenticacao autenticacao, string vTipoPlataforma, string vCpf, string vNumDocumento, string vDigito, string vOrgaoEmissor, string vUfEmissao, string vTipoDocumentoArrecadacao)
         {
             this.autenticacao = autenticacao;
-            this.tipoPlataforma = tipoPlataforma;
-            this.renavam = renavam;
-            this.codSeguranca = codSeguranca;
-            this.tipoDocumentoIn = tipoDocumentoIn;
-            this.anoLicenciamentoIn = anoLicenciamentoIn;
+            this.vTipoPlataforma = vTipoPlataforma;
+            this.vCpf = vCpf;
+            this.vNumDocumento = vNumDocumento;
+            this.vDigito = vDigito;
+            this.vOrgaoEmissor = vOrgaoEmissor;
+            this.vUfEmissao = vUfEmissao;
+            this.vTipoDocumentoArrecadacao = vTipoDocumentoArrecadacao;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarServicoLicenciamentoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
-    public partial class validarServicoLicenciamentoResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarRenovacaoHabilitacaoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarRenovacaoHabilitacaoResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
-        public wsDetranChatBot.validarServicoLicenciamentoResult validarServicoLicenciamentoResult;
+        public wsDetranChatBot.validarRenovacaoHabilitacaoResult validarRenovacaoHabilitacaoResult;
         
-        public validarServicoLicenciamentoResponse()
+        public validarRenovacaoHabilitacaoResponse()
         {
         }
         
-        public validarServicoLicenciamentoResponse(wsDetranChatBot.validarServicoLicenciamentoResult validarServicoLicenciamentoResult)
+        public validarRenovacaoHabilitacaoResponse(wsDetranChatBot.validarRenovacaoHabilitacaoResult validarRenovacaoHabilitacaoResult)
         {
-            this.validarServicoLicenciamentoResult = validarServicoLicenciamentoResult;
+            this.validarRenovacaoHabilitacaoResult = validarRenovacaoHabilitacaoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="realizarServicoRenovacaoHabilitacao", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class realizarServicoRenovacaoHabilitacaoRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string vTipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public string vCpf;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
+        public string vTipoDua;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=3)]
+        public string vLocalEntrega;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=4)]
+        public string vTipoEndereco;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=5)]
+        public string vEndereco;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=6)]
+        public string vNumeroEndereco;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=7)]
+        public string vComplemento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=8)]
+        public string vBairro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=9)]
+        public string vMunicipio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=10)]
+        public string vCep;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=11)]
+        public string vUf;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=12)]
+        public string vTelefone;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=13)]
+        public int vSetorEntrega;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=14)]
+        public string vEmail;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=15)]
+        public string vDDD;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=16)]
+        public string vNomeCandidato;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=17)]
+        public string vCategoria;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=18)]
+        public int vTipoDocPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=19)]
+        public string vNumeroPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=20)]
+        public string vDigitoPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=21)]
+        public string vOrgaoEmissorPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=22)]
+        public string vUfDocPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=23)]
+        public string vNomeMaePrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=24)]
+        public string vNomePai;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=25)]
+        public string vSexo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=26)]
+        public int vNacionalidade;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=27)]
+        public string vUfNaturalidade;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=28)]
+        public string vLocalidadeNasc;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=29)]
+        public string vNaturalidade;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=30)]
+        public int vDataNascimento;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=31)]
+        public int vEscolaridade;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=32)]
+        public string vDeficienciaFisica;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=33)]
+        public string vProvaCursoRenovacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=34)]
+        public string vAtividadeRemunerada;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=35)]
+        public string vUfPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=36)]
+        public string vDataPrimHab;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=37)]
+        public string vSetorVirtual;
+        
+        public realizarServicoRenovacaoHabilitacaoRequest()
+        {
+        }
+        
+        public realizarServicoRenovacaoHabilitacaoRequest(
+                    wsDetranChatBot.autenticacao autenticacao, 
+                    string vTipoPlataforma, 
+                    string vCpf, 
+                    string vTipoDua, 
+                    string vLocalEntrega, 
+                    string vTipoEndereco, 
+                    string vEndereco, 
+                    string vNumeroEndereco, 
+                    string vComplemento, 
+                    string vBairro, 
+                    string vMunicipio, 
+                    string vCep, 
+                    string vUf, 
+                    string vTelefone, 
+                    int vSetorEntrega, 
+                    string vEmail, 
+                    string vDDD, 
+                    string vNomeCandidato, 
+                    string vCategoria, 
+                    int vTipoDocPrimHab, 
+                    string vNumeroPrimHab, 
+                    string vDigitoPrimHab, 
+                    string vOrgaoEmissorPrimHab, 
+                    string vUfDocPrimHab, 
+                    string vNomeMaePrimHab, 
+                    string vNomePai, 
+                    string vSexo, 
+                    int vNacionalidade, 
+                    string vUfNaturalidade, 
+                    string vLocalidadeNasc, 
+                    string vNaturalidade, 
+                    int vDataNascimento, 
+                    int vEscolaridade, 
+                    string vDeficienciaFisica, 
+                    string vProvaCursoRenovacao, 
+                    string vAtividadeRemunerada, 
+                    string vUfPrimHab, 
+                    string vDataPrimHab, 
+                    string vSetorVirtual)
+        {
+            this.autenticacao = autenticacao;
+            this.vTipoPlataforma = vTipoPlataforma;
+            this.vCpf = vCpf;
+            this.vTipoDua = vTipoDua;
+            this.vLocalEntrega = vLocalEntrega;
+            this.vTipoEndereco = vTipoEndereco;
+            this.vEndereco = vEndereco;
+            this.vNumeroEndereco = vNumeroEndereco;
+            this.vComplemento = vComplemento;
+            this.vBairro = vBairro;
+            this.vMunicipio = vMunicipio;
+            this.vCep = vCep;
+            this.vUf = vUf;
+            this.vTelefone = vTelefone;
+            this.vSetorEntrega = vSetorEntrega;
+            this.vEmail = vEmail;
+            this.vDDD = vDDD;
+            this.vNomeCandidato = vNomeCandidato;
+            this.vCategoria = vCategoria;
+            this.vTipoDocPrimHab = vTipoDocPrimHab;
+            this.vNumeroPrimHab = vNumeroPrimHab;
+            this.vDigitoPrimHab = vDigitoPrimHab;
+            this.vOrgaoEmissorPrimHab = vOrgaoEmissorPrimHab;
+            this.vUfDocPrimHab = vUfDocPrimHab;
+            this.vNomeMaePrimHab = vNomeMaePrimHab;
+            this.vNomePai = vNomePai;
+            this.vSexo = vSexo;
+            this.vNacionalidade = vNacionalidade;
+            this.vUfNaturalidade = vUfNaturalidade;
+            this.vLocalidadeNasc = vLocalidadeNasc;
+            this.vNaturalidade = vNaturalidade;
+            this.vDataNascimento = vDataNascimento;
+            this.vEscolaridade = vEscolaridade;
+            this.vDeficienciaFisica = vDeficienciaFisica;
+            this.vProvaCursoRenovacao = vProvaCursoRenovacao;
+            this.vAtividadeRemunerada = vAtividadeRemunerada;
+            this.vUfPrimHab = vUfPrimHab;
+            this.vDataPrimHab = vDataPrimHab;
+            this.vSetorVirtual = vSetorVirtual;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="realizarServicoRenovacaoHabilitacaoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class realizarServicoRenovacaoHabilitacaoResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.realizarServicoRenovacaoHabilitacaoResult realizarServicoRenovacaoHabilitacaoResult;
+        
+        public realizarServicoRenovacaoHabilitacaoResponse()
+        {
+        }
+        
+        public realizarServicoRenovacaoHabilitacaoResponse(wsDetranChatBot.realizarServicoRenovacaoHabilitacaoResult realizarServicoRenovacaoHabilitacaoResult)
+        {
+            this.realizarServicoRenovacaoHabilitacaoResult = realizarServicoRenovacaoHabilitacaoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultarCEP", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class consultarCEPRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string vTipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public decimal vCEP;
+        
+        public consultarCEPRequest()
+        {
+        }
+        
+        public consultarCEPRequest(wsDetranChatBot.autenticacao autenticacao, string vTipoPlataforma, decimal vCEP)
+        {
+            this.autenticacao = autenticacao;
+            this.vTipoPlataforma = vTipoPlataforma;
+            this.vCEP = vCEP;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="consultarCEPResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class consultarCEPResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.ConsultaCEP consultarCEPResult;
+        
+        public consultarCEPResponse()
+        {
+        }
+        
+        public consultarCEPResponse(wsDetranChatBot.ConsultaCEP consultarCEPResult)
+        {
+            this.consultarCEPResult = consultarCEPResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SituacaoVeiculoLicenciamento", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class SituacaoVeiculoLicenciamentoRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string tipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public double pRenavam;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
+        public double pCodSeguranca;
+        
+        public SituacaoVeiculoLicenciamentoRequest()
+        {
+        }
+        
+        public SituacaoVeiculoLicenciamentoRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double pRenavam, double pCodSeguranca)
+        {
+            this.autenticacao = autenticacao;
+            this.tipoPlataforma = tipoPlataforma;
+            this.pRenavam = pRenavam;
+            this.pCodSeguranca = pCodSeguranca;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SituacaoVeiculoLicenciamentoResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class SituacaoVeiculoLicenciamentoResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.realizarSituacaoVeiculoResult SituacaoVeiculoLicenciamentoResult;
+        
+        public SituacaoVeiculoLicenciamentoResponse()
+        {
+        }
+        
+        public SituacaoVeiculoLicenciamentoResponse(wsDetranChatBot.realizarSituacaoVeiculoResult SituacaoVeiculoLicenciamentoResult)
+        {
+            this.SituacaoVeiculoLicenciamentoResult = SituacaoVeiculoLicenciamentoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarConsultaCnh", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarConsultaCnhRequest
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://detran.se.gov.br/services/chatbot/")]
+        public wsDetranChatBot.autenticacao autenticacao;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public string tipoPlataforma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=1)]
+        public string nroRegistro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=2)]
+        public string nroCnh;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=3)]
+        public string dataNascimento;
+        
+        public validarConsultaCnhRequest()
+        {
+        }
+        
+        public validarConsultaCnhRequest(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, string nroRegistro, string nroCnh, string dataNascimento)
+        {
+            this.autenticacao = autenticacao;
+            this.tipoPlataforma = tipoPlataforma;
+            this.nroRegistro = nroRegistro;
+            this.nroCnh = nroCnh;
+            this.dataNascimento = dataNascimento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validarConsultaCnhResponse", WrapperNamespace="http://detran.se.gov.br/services/chatbot/", IsWrapped=true)]
+    internal partial class validarConsultaCnhResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://detran.se.gov.br/services/chatbot/", Order=0)]
+        public wsDetranChatBot.validarConsultaCNHResult validarConsultaCnhResult;
+        
+        public validarConsultaCnhResponse()
+        {
+        }
+        
+        public validarConsultaCnhResponse(wsDetranChatBot.validarConsultaCNHResult validarConsultaCnhResult)
+        {
+            this.validarConsultaCnhResult = validarConsultaCnhResult;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public interface wsChatbotSoapChannel : wsDetranChatBot.wsChatbotSoap, System.ServiceModel.IClientChannel
+    internal interface wsChatbotSoapChannel : wsDetranChatBot.wsChatbotSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public partial class wsChatbotSoapClient : System.ServiceModel.ClientBase<wsDetranChatBot.wsChatbotSoap>, wsDetranChatBot.wsChatbotSoap
+    internal partial class wsChatbotSoapClient : System.ServiceModel.ClientBase<wsDetranChatBot.wsChatbotSoap>, wsDetranChatBot.wsChatbotSoap
     {
         
         /// <summary>
@@ -1950,29 +8232,6 @@ namespace wsDetranChatBot
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> wsDetranChatBot.wsChatbotSoap.efetuarServicoLicenciamentoAsync(wsDetranChatBot.efetuarServicoLicenciamentoRequest request)
-        {
-            return base.Channel.efetuarServicoLicenciamentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> efetuarServicoLicenciamentoAsync(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double renavam, double codSeguranca, string restricao, double anoExercicioLicenciamento, string tipoAutorizacaoRNTRC, double nroAutorizacaoRNTRC, string dataValidadeRNTRC, string isencaoIPVA, string tipoDocumentoIn)
-        {
-            wsDetranChatBot.efetuarServicoLicenciamentoRequest inValue = new wsDetranChatBot.efetuarServicoLicenciamentoRequest();
-            inValue.autenticacao = autenticacao;
-            inValue.tipoPlataforma = tipoPlataforma;
-            inValue.renavam = renavam;
-            inValue.codSeguranca = codSeguranca;
-            inValue.restricao = restricao;
-            inValue.anoExercicioLicenciamento = anoExercicioLicenciamento;
-            inValue.tipoAutorizacaoRNTRC = tipoAutorizacaoRNTRC;
-            inValue.nroAutorizacaoRNTRC = nroAutorizacaoRNTRC;
-            inValue.dataValidadeRNTRC = dataValidadeRNTRC;
-            inValue.isencaoIPVA = isencaoIPVA;
-            inValue.tipoDocumentoIn = tipoDocumentoIn;
-            return ((wsDetranChatBot.wsChatbotSoap)(this)).efetuarServicoLicenciamentoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<wsDetranChatBot.obterEmissaoCrlvResponse> wsDetranChatBot.wsChatbotSoap.obterEmissaoCrlvAsync(wsDetranChatBot.obterEmissaoCrlvRequest request)
         {
             return base.Channel.obterEmissaoCrlvAsync(request);
@@ -2004,6 +8263,203 @@ namespace wsDetranChatBot
             inValue.tipoDocumentoIn = tipoDocumentoIn;
             inValue.anoLicenciamentoIn = anoLicenciamentoIn;
             return ((wsDetranChatBot.wsChatbotSoap)(this)).validarServicoLicenciamentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> wsDetranChatBot.wsChatbotSoap.efetuarServicoLicenciamentoAsync(wsDetranChatBot.efetuarServicoLicenciamentoRequest request)
+        {
+            return base.Channel.efetuarServicoLicenciamentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.efetuarServicoLicenciamentoResponse> efetuarServicoLicenciamentoAsync(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double renavam, double codSeguranca, string restricao, double anoExercicioLicenciamento, string tipoAutorizacaoRNTRC, double nroAutorizacaoRNTRC, string dataValidadeRNTRC, string isencaoIPVA, string tipoDocumentoIn)
+        {
+            wsDetranChatBot.efetuarServicoLicenciamentoRequest inValue = new wsDetranChatBot.efetuarServicoLicenciamentoRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.tipoPlataforma = tipoPlataforma;
+            inValue.renavam = renavam;
+            inValue.codSeguranca = codSeguranca;
+            inValue.restricao = restricao;
+            inValue.anoExercicioLicenciamento = anoExercicioLicenciamento;
+            inValue.tipoAutorizacaoRNTRC = tipoAutorizacaoRNTRC;
+            inValue.nroAutorizacaoRNTRC = nroAutorizacaoRNTRC;
+            inValue.dataValidadeRNTRC = dataValidadeRNTRC;
+            inValue.isencaoIPVA = isencaoIPVA;
+            inValue.tipoDocumentoIn = tipoDocumentoIn;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).efetuarServicoLicenciamentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.obterCalendarioLicenciamentoResponse> wsDetranChatBot.wsChatbotSoap.obterCalendarioLicenciamentoAsync(wsDetranChatBot.obterCalendarioLicenciamentoRequest request)
+        {
+            return base.Channel.obterCalendarioLicenciamentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.obterCalendarioLicenciamentoResponse> obterCalendarioLicenciamentoAsync(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, int anoLicenciamento, int finalPlaca)
+        {
+            wsDetranChatBot.obterCalendarioLicenciamentoRequest inValue = new wsDetranChatBot.obterCalendarioLicenciamentoRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.tipoPlataforma = tipoPlataforma;
+            inValue.anoLicenciamento = anoLicenciamento;
+            inValue.finalPlaca = finalPlaca;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).obterCalendarioLicenciamentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.validarRenovacaoHabilitacaoResponse> wsDetranChatBot.wsChatbotSoap.validarRenovacaoHabilitacaoAsync(wsDetranChatBot.validarRenovacaoHabilitacaoRequest request)
+        {
+            return base.Channel.validarRenovacaoHabilitacaoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.validarRenovacaoHabilitacaoResponse> validarRenovacaoHabilitacaoAsync(wsDetranChatBot.autenticacao autenticacao, string vTipoPlataforma, string vCpf, string vNumDocumento, string vDigito, string vOrgaoEmissor, string vUfEmissao, string vTipoDocumentoArrecadacao)
+        {
+            wsDetranChatBot.validarRenovacaoHabilitacaoRequest inValue = new wsDetranChatBot.validarRenovacaoHabilitacaoRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.vTipoPlataforma = vTipoPlataforma;
+            inValue.vCpf = vCpf;
+            inValue.vNumDocumento = vNumDocumento;
+            inValue.vDigito = vDigito;
+            inValue.vOrgaoEmissor = vOrgaoEmissor;
+            inValue.vUfEmissao = vUfEmissao;
+            inValue.vTipoDocumentoArrecadacao = vTipoDocumentoArrecadacao;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).validarRenovacaoHabilitacaoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.realizarServicoRenovacaoHabilitacaoResponse> wsDetranChatBot.wsChatbotSoap.realizarServicoRenovacaoHabilitacaoAsync(wsDetranChatBot.realizarServicoRenovacaoHabilitacaoRequest request)
+        {
+            return base.Channel.realizarServicoRenovacaoHabilitacaoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.realizarServicoRenovacaoHabilitacaoResponse> realizarServicoRenovacaoHabilitacaoAsync(
+                    wsDetranChatBot.autenticacao autenticacao, 
+                    string vTipoPlataforma, 
+                    string vCpf, 
+                    string vTipoDua, 
+                    string vLocalEntrega, 
+                    string vTipoEndereco, 
+                    string vEndereco, 
+                    string vNumeroEndereco, 
+                    string vComplemento, 
+                    string vBairro, 
+                    string vMunicipio, 
+                    string vCep, 
+                    string vUf, 
+                    string vTelefone, 
+                    int vSetorEntrega, 
+                    string vEmail, 
+                    string vDDD, 
+                    string vNomeCandidato, 
+                    string vCategoria, 
+                    int vTipoDocPrimHab, 
+                    string vNumeroPrimHab, 
+                    string vDigitoPrimHab, 
+                    string vOrgaoEmissorPrimHab, 
+                    string vUfDocPrimHab, 
+                    string vNomeMaePrimHab, 
+                    string vNomePai, 
+                    string vSexo, 
+                    int vNacionalidade, 
+                    string vUfNaturalidade, 
+                    string vLocalidadeNasc, 
+                    string vNaturalidade, 
+                    int vDataNascimento, 
+                    int vEscolaridade, 
+                    string vDeficienciaFisica, 
+                    string vProvaCursoRenovacao, 
+                    string vAtividadeRemunerada, 
+                    string vUfPrimHab, 
+                    string vDataPrimHab, 
+                    string vSetorVirtual)
+        {
+            wsDetranChatBot.realizarServicoRenovacaoHabilitacaoRequest inValue = new wsDetranChatBot.realizarServicoRenovacaoHabilitacaoRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.vTipoPlataforma = vTipoPlataforma;
+            inValue.vCpf = vCpf;
+            inValue.vTipoDua = vTipoDua;
+            inValue.vLocalEntrega = vLocalEntrega;
+            inValue.vTipoEndereco = vTipoEndereco;
+            inValue.vEndereco = vEndereco;
+            inValue.vNumeroEndereco = vNumeroEndereco;
+            inValue.vComplemento = vComplemento;
+            inValue.vBairro = vBairro;
+            inValue.vMunicipio = vMunicipio;
+            inValue.vCep = vCep;
+            inValue.vUf = vUf;
+            inValue.vTelefone = vTelefone;
+            inValue.vSetorEntrega = vSetorEntrega;
+            inValue.vEmail = vEmail;
+            inValue.vDDD = vDDD;
+            inValue.vNomeCandidato = vNomeCandidato;
+            inValue.vCategoria = vCategoria;
+            inValue.vTipoDocPrimHab = vTipoDocPrimHab;
+            inValue.vNumeroPrimHab = vNumeroPrimHab;
+            inValue.vDigitoPrimHab = vDigitoPrimHab;
+            inValue.vOrgaoEmissorPrimHab = vOrgaoEmissorPrimHab;
+            inValue.vUfDocPrimHab = vUfDocPrimHab;
+            inValue.vNomeMaePrimHab = vNomeMaePrimHab;
+            inValue.vNomePai = vNomePai;
+            inValue.vSexo = vSexo;
+            inValue.vNacionalidade = vNacionalidade;
+            inValue.vUfNaturalidade = vUfNaturalidade;
+            inValue.vLocalidadeNasc = vLocalidadeNasc;
+            inValue.vNaturalidade = vNaturalidade;
+            inValue.vDataNascimento = vDataNascimento;
+            inValue.vEscolaridade = vEscolaridade;
+            inValue.vDeficienciaFisica = vDeficienciaFisica;
+            inValue.vProvaCursoRenovacao = vProvaCursoRenovacao;
+            inValue.vAtividadeRemunerada = vAtividadeRemunerada;
+            inValue.vUfPrimHab = vUfPrimHab;
+            inValue.vDataPrimHab = vDataPrimHab;
+            inValue.vSetorVirtual = vSetorVirtual;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).realizarServicoRenovacaoHabilitacaoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.consultarCEPResponse> wsDetranChatBot.wsChatbotSoap.consultarCEPAsync(wsDetranChatBot.consultarCEPRequest request)
+        {
+            return base.Channel.consultarCEPAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.consultarCEPResponse> consultarCEPAsync(wsDetranChatBot.autenticacao autenticacao, string vTipoPlataforma, decimal vCEP)
+        {
+            wsDetranChatBot.consultarCEPRequest inValue = new wsDetranChatBot.consultarCEPRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.vTipoPlataforma = vTipoPlataforma;
+            inValue.vCEP = vCEP;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).consultarCEPAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.SituacaoVeiculoLicenciamentoResponse> wsDetranChatBot.wsChatbotSoap.SituacaoVeiculoLicenciamentoAsync(wsDetranChatBot.SituacaoVeiculoLicenciamentoRequest request)
+        {
+            return base.Channel.SituacaoVeiculoLicenciamentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.SituacaoVeiculoLicenciamentoResponse> SituacaoVeiculoLicenciamentoAsync(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, double pRenavam, double pCodSeguranca)
+        {
+            wsDetranChatBot.SituacaoVeiculoLicenciamentoRequest inValue = new wsDetranChatBot.SituacaoVeiculoLicenciamentoRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.tipoPlataforma = tipoPlataforma;
+            inValue.pRenavam = pRenavam;
+            inValue.pCodSeguranca = pCodSeguranca;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).SituacaoVeiculoLicenciamentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<wsDetranChatBot.validarConsultaCnhResponse> wsDetranChatBot.wsChatbotSoap.validarConsultaCnhAsync(wsDetranChatBot.validarConsultaCnhRequest request)
+        {
+            return base.Channel.validarConsultaCnhAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<wsDetranChatBot.validarConsultaCnhResponse> validarConsultaCnhAsync(wsDetranChatBot.autenticacao autenticacao, string tipoPlataforma, string nroRegistro, string nroCnh, string dataNascimento)
+        {
+            wsDetranChatBot.validarConsultaCnhRequest inValue = new wsDetranChatBot.validarConsultaCnhRequest();
+            inValue.autenticacao = autenticacao;
+            inValue.tipoPlataforma = tipoPlataforma;
+            inValue.nroRegistro = nroRegistro;
+            inValue.nroCnh = nroCnh;
+            inValue.dataNascimento = dataNascimento;
+            return ((wsDetranChatBot.wsChatbotSoap)(this)).validarConsultaCnhAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -2047,11 +8503,11 @@ namespace wsDetranChatBot
         {
             if ((endpointConfiguration == EndpointConfiguration.wsChatbotSoap))
             {
-                return new System.ServiceModel.EndpointAddress("http://172.28.64.58:9176/homologa/serviceChatBot");
+                return new System.ServiceModel.EndpointAddress("http://192.168.170.117/wsChatbot.asmx");
             }
             if ((endpointConfiguration == EndpointConfiguration.wsChatbotSoap12))
             {
-                return new System.ServiceModel.EndpointAddress("http://172.28.64.58:9176/homologa/serviceChatBot");
+                return new System.ServiceModel.EndpointAddress("http://192.168.170.117/wsChatbot.asmx");
             }
             throw new System.InvalidOperationException(string.Format("Não foi possível encontrar o ponto de extremidade com o nome \'{0}\'.", endpointConfiguration));
         }

@@ -106,6 +106,7 @@ namespace Microsoft.BotBuilderSamples.Dialogs
                 CRLVeFields.erroCodigo = webResult.erro.codigo;
                 CRLVeFields.erroMensagem = webResult.erro.mensagem;
                 CRLVeFields.erroTrace = webResult.erro.trace;
+                
 
                 stepContext.Values["CRLVeFields"] = CRLVeFields;
 

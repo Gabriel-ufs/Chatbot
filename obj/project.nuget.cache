@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J7hUn3w/PIES7Bs9w7AWhRXyIGOjvl8p/RwYQ5usDiBuqiIh/PsAHhsOLdT97BXLehGdVPt+QdDe0oxCDN+lbQ==",
+  "dgSpecHash": "QABkOHuVrDl0IS6qL7/ALHJnjfm6COA87i+FDozFEGzM2aLt3kL6UZTexV0BQImjxOP0jvh1Bc56O1TtzughXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\teste master\\main\\canais-chatbot\\CoreBot.csproj",
+  "projectFilePath": "C:\\Users\\Pichau\\Desktop\\teste master\\dev_gabriel\\canais-chatbot\\CoreBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pichau\\.nuget\\packages\\adaptivecards\\2.4.0\\adaptivecards.2.4.0.nupkg.sha512",
     "C:\\Users\\Pichau\\.nuget\\packages\\adaptiveexpressions\\4.12.2\\adaptiveexpressions.4.12.2.nupkg.sha512",

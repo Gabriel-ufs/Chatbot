@@ -14285,11 +14285,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pichau\\Desktop\\teste master\\main\\canais-chatbot\\CoreBot.csproj",
+      "projectUniqueName": "C:\\Users\\Pichau\\Desktop\\teste master\\dev_gabriel\\canais-chatbot\\CoreBot.csproj",
       "projectName": "CoreBot",
-      "projectPath": "C:\\Users\\Pichau\\Desktop\\teste master\\main\\canais-chatbot\\CoreBot.csproj",
+      "projectPath": "C:\\Users\\Pichau\\Desktop\\teste master\\dev_gabriel\\canais-chatbot\\CoreBot.csproj",
       "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pichau\\Desktop\\teste master\\main\\canais-chatbot\\obj\\",
+      "outputPath": "C:\\Users\\Pichau\\Desktop\\teste master\\dev_gabriel\\canais-chatbot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",

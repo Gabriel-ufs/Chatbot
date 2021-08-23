@@ -83,6 +83,7 @@ namespace CoreBot.Models.Generate
             var docName = name;
 
             var fullPath = Path.Combine(Directory.GetCurrentDirectory() + "/wwwroot/temp/", docName);
+            
             using (FileStream outFile = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
             {
                 var bytes = Convert.FromBase64String(doc);

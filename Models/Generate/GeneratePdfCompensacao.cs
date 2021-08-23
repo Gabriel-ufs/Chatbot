@@ -370,9 +370,8 @@ namespace CoreBot.Models.Generate
             return tablePendencias;
         }
 
-        public static PdfPTable tableVia(PdfWriter writer, Font FontePadrao, Rectangle page, iTextSharp.text.Image image, Font Subtitulo, LicenseFields LicenseFields)
+        public static PdfPTable tableVia(PdfWriter writer, Font FontePadrao, Rectangle page, iTextSharp.text.Image imageBanese, Font Subtitulo, LicenseFields LicenseFields)
         {
-            /// CABEÇALHO
             PdfPTable tableVia = new PdfPTable(6);
             tableVia.TotalWidth = page.Width;
 
@@ -388,7 +387,7 @@ namespace CoreBot.Models.Generate
             tableVia.AddCell(viaCellValor);
 
             PdfPCell viaCell0 = new PdfPCell();
-            AddImageInCell(viaCell0, image, 50f, 50f, 1);
+            AddImageInCell(viaCell0, imageBanese, 50f, 50f, 1);
             viaCell0.HorizontalAlignment = 0;
             viaCell0.Border = 0;
             viaCell0.Padding = 2f;
