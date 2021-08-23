@@ -1,0 +1,67 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "Image",
+      "url": "http://www.devworkplace.com/logotipo.png",
+      "size": "stretch",
+      "padding": {
+        "left": 10,
+        "top": 10,
+        "right": 10,
+        "bottom": 10
+      },
+        "backgroundColor": "#000"
+      },
+    {
+      "type": "TextBlock",
+      "spacing": "medium",
+      "size": "default",
+      "weight": "bolder",
+      "text": "Bem-vindo ao Bot Dev!",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": "yes",
+      "text": "Olá eu sou o assistente virtual **DEV**, siga os links nesta placa para navegar e conhecer um pouco mais sobre nossos serviços. Ou, se preferir, converse com nosso bot.",
+      "wrap": true,
+      "maxLines": 0
+    }
+  ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Licenciamento Banese",
+            "data": {
+                "msteams": {
+                    "type": "messageBack",
+                    "displayText": "I clicked this button",
+                    "text": "text to bots",
+                    "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
+                }
+            }
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Licenciamento Outros Bancos",
+            "data": {
+                "msteams": {
+                    "type": "messageBack",
+                    "displayText": "I clicked this button",
+                    "text": "text to bots",
+                    "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
+                }
+            }
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Cursos",
+            "url": "http://www.devworkplace.com/DevCursos"
+        }
+    ]
+}
